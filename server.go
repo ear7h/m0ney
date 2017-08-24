@@ -5,63 +5,13 @@ import (
 	"time"
 	"encoding/json"
 	"fmt"
-	"crypto/rand"
-	mrand "math/rand"
-	"encoding/base64"
 	"io/ioutil"
+	"m0ney/data"
+	"m0ney/sessions"
 )
 
-//dummy funcion
-func getSets() []dataset {
-	arr := []dataset{
-		{
-			Ticker: "AAPL",
-			Start: time.Now(),
-			End: time.Now().Add(time.Second),
-		}, {
-			Ticker: "AAPL",
-			Start: time.Now().Add(20 * time.Hour),
-			End: time.Now().Add(25 * time.Hour),
-		},
-	}
-
-	return arr
-}
-
-func getMoment(t time.Time, p time.Duration) float32 {
-	return mrand.Float32()
-}
-
-
-//data sets are continuous on the specified time interval. the moment table has an interval of 1 minute
-type dataset struct {
-	Ticker string `json:"ticker"`
-	Interval time.Duration `json:"interval"`
-	Start time.Time `json:"start"`
-	End time.Time `json:"end"`
-}
-
-//this represents a practice/training session
-type session struct {
-	sessStart time.Time
-	CurrentTime time.Time `json:"current_time"`
-	Interval time.Duration `json:"interval"`
-	Ticker string `json:"ticker"`
-	BidPrice float32 `json:"bid_price"`
-}
-
-func (s *session) next() session {
-	s.BidPrice = getMoment(s.CurrentTime, s.Interval)
-
-	s.CurrentTime = s.CurrentTime.Add(s.Interval)
-
-	return *s
-}
-
-var SESSIONS map[string]*session = map[string]*session{}
-
 func handleList(w http.ResponseWriter, r *http.Request) {
-	arr := getSets()
+	arr := data.GetSets()
 
 	byt, err := json.Marshal(arr)
 	if err != nil {
@@ -73,33 +23,18 @@ func handleList(w http.ResponseWriter, r *http.Request) {
 	w.Write(byt)
 }
 
-func sessionFromDataset(req dataset) (string, error) {
-	token := make([]byte, 10)
-	_, err := rand.Read(token)
-	if err != nil {
-		return "", err
-	}
+func sessionFromDataset(req data.Dataset) (string, error) {
 
-	tokenStr := base64.StdEncoding.EncodeToString(token)
-
-
-	for SESSIONS[tokenStr] != nil {
-		_, err = rand.Read(token)
-		if err != nil {
-			return "", err
-		}
-
-		tokenStr = base64.StdEncoding.EncodeToString(token)
-	}
-
-	SESSIONS[tokenStr] = &session{
-		sessStart: time.Now(),
-		Interval: req.Interval,
+	token := sessions.Create(&sessions.Session{
+		SessStart: time.Now(),
 		CurrentTime: req.Start,
+		EndTime: req.End,
+		Scale: req.Scale,
 		Ticker: req.Ticker,
-	}
+		Table: req.Table,
+	})
 
-	return tokenStr, nil
+	return token, nil
 }
 
 func handleSessionCreate(w http.ResponseWriter, r *http.Request) {
@@ -115,26 +50,24 @@ func handleSessionCreate(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	req := dataset{}
+	req := data.Dataset{}
 	err = json.Unmarshal(byt, &req)
 	if err != nil {
 		http.Error(w, "could not parse body", http.StatusBadRequest)
 		return
 	}
 
-	str, err := sessionFromDataset(req)
-	if err != nil {
-		http.Error(w, "session could not be created", http.StatusInternalServerError)
-		return
-	}
 
-	v := struct {
-		Token string `json:"token"`
-	}{
-		Token: str,
-	}
+	//create session from request
+	token := sessions.Create(&sessions.Session{
+		SessStart: time.Now(),
+		Scale: req.Scale,
+		CurrentTime: req.Start,
+		Ticker: req.Ticker,
+	})
 
-	fmt.Println(str)
+
+	v := map[string]string{"token": token}
 
 	retByt, err := json.Marshal(v)
 	if err != nil {
@@ -151,25 +84,28 @@ func handleSession(w http.ResponseWriter, r *http.Request)  {
 
 	if r.Method != http.MethodGet {
 		http.Error(w, "must be get request", http.StatusMethodNotAllowed)
+		return
 	}
 
 	token := r.URL.Path[len("/session/"):]
 
-	if SESSIONS[token] == (&session{}) {
+	sess := sessions.Get(token)
+
+	if sess == nil {
 		http.Error(w, "session " + token +" doesn't exist", http.StatusNotFound)
 		return
 	}
 
-	ret := SESSIONS[token].next()
+	ret := sess.Next()
 
 	byt, err := json.Marshal(ret)
 	if err != nil {
 		http.Error(w, "could not marshal response", http.StatusInternalServerError)
+		return
 	}
 
 	w.WriteHeader(http.StatusOK)
 	w.Write(byt)
-
 }
 
 func main() {
