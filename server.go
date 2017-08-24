@@ -108,6 +108,7 @@ func handleSession(w http.ResponseWriter, r *http.Request)  {
 	w.Write(byt)
 }
 
+//entry point for server
 func main() {
 	fmt.Println("starting")
 
