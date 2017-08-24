@@ -1,3 +1,13 @@
+# Ignore all
+*
+
+# Unignore all with extensions
+!*.*
+
+# Unignore all dirs
+!*/
+
+
 # Binaries for programs and plugins
 *.exe
 *.dll
@@ -16,3 +26,4 @@
 # dev stuff
 .DS_Store
 .idea/
+

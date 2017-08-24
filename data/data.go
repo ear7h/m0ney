@@ -37,7 +37,7 @@ func GetSets() []Dataset {
 
 	for rows.Next() {
 		v := Dataset{}
-		rows.Scan(&v.Ticker, &v.Scale, &v.Start, &v.End)
+		rows.Scan(&v.ID, &v.Ticker, &v.Scale, &v.Start, &v.End)
 
 		arr = append(arr, v)
 	}
@@ -45,7 +45,9 @@ func GetSets() []Dataset {
 	return arr
 }
 
-func InsertMoment(v Moment) error {
+func InsertRhQuote(r RhQuote) error {
+	v := r.ToMoment()
+
 	_, err := DB.Exec("INSERT INTO MOMENT (" +
 		"ask_price, ask_size, bid_price, bid_size," +
 		"last_trade_price, symbol, updated_at" +
@@ -57,5 +59,9 @@ func InsertMoment(v Moment) error {
 	if err != nil {
 		return err
 	}
+	return nil
+}
+
+func InsertDataset(v Dataset) error {
 	return nil
 }
