@@ -8,6 +8,7 @@ import (
 	"encoding/json"
 	"strings"
 	"m0ney/data"
+	"os"
 )
 
 const (
@@ -135,12 +136,17 @@ func addDataSets(start, end time.Time, scale time.Duration, sym []string) {
 	s := data.Dataset{
 		Start: start,
 		End: end,
+		Scale: scale,
 		Table: "moment",
 	}
 
 	for _, v := range sym {
-		s.Ticker = v
-		data.InsertDataset(s)
+		s.Symbol = v
+		err := data.InsertDataset(s)
+		if err != nil {
+			panic(err)
+			os.Exit(1)
+		}
 	}
 
 }
@@ -148,20 +154,19 @@ func addDataSets(start, end time.Time, scale time.Duration, sym []string) {
 func dayLoop(start, end time.Time) {
 	fmt.Println("market open at: ", start)
 
-	if start.Before(time.Now()) {
-		go addDataSets(time.Now(), end, time.Second, SYMBOLS)
-	} else {
-		go addDataSets(start, end, time.Second, SYMBOLS)
-		time.Sleep(time.Until(start))
-	}
-	fmt.Println("starting")
+	//add data set after completion of day loop
+	defer func (t time.Time) {
+		addDataSets(t, time.Now(), time.Second, SYMBOLS)
+	}(time.Now())
 
-	for time.Now().Before(end) {
+	fmt.Println("retriever starting")
+
+	//for time.Now().Before(end) {
 		time.Sleep(time.Second)
 		insertPrices()
-	}
+	//}
 
-	fmt.Println("finished")
+	fmt.Println("retriver finished")
 
 }
 
