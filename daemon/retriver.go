@@ -148,7 +148,7 @@ func addDataSets(start, end time.Time, scale time.Duration, sym []string) {
 func dayLoop(start, end time.Time) {
 	fmt.Println("market open at: ", start)
 
-	if true {//start.Before(time.Now()) {
+	if start.Before(time.Now()) {
 		go addDataSets(time.Now(), end, time.Second, SYMBOLS)
 	} else {
 		go addDataSets(start, end, time.Second, SYMBOLS)

@@ -12,9 +12,22 @@ const (
 
 var DB *sql.DB
 
+//open db
 func init() {
+	m := mysqlCreds
+
+	//user, password, host, port, database
+	Open(m["user"], m["password"], m["host"], m["port"], m["database"])
+}
+
+func Open(user, password, host, port, database string) {
+
+	url := fmt.Sprint(user, ":", password, "@(", host, ")/", database)
+
+	fmt.Println(url)
+
 	var err error
-	DB, err = sql.Open("mysql", "root@/stocks")
+	DB, err = sql.Open("mysql", url)
 	if err != nil {
 		panic(err)
 	}
