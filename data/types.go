@@ -15,7 +15,7 @@ const (
 //data sets are continuous on the specified time interval. the moment table has an interval of 1 minute
 type Dataset struct {
 	ID     int           `json:"id"`
-	Ticker string        `json:"ticker"`
+	Symbol string        `json:"symbol"`
 	Scale  time.Duration `json:"scale"`
 	Start  time.Time     `json:"start"`
 	End    time.Time     `json:"end"`

@@ -22,7 +22,7 @@ func init() {
 
 func Open(user, password, host, port, database string) {
 
-	url := fmt.Sprint(user, ":", password, "@(", host, ")/", database)
+	url := fmt.Sprint(user, ":", password, "@(", host, ":", port, ")/", database)
 
 	fmt.Println(url)
 
@@ -41,7 +41,7 @@ func Open(user, password, host, port, database string) {
 }
 
 func GetSets() []Dataset {
-	rows, err := DB.Query("SELECT * FROM SETS;")
+	rows, err := DB.Query("SELECT * FROM sets;")
 	if err != nil {
 		panic(err)
 	}
@@ -50,7 +50,7 @@ func GetSets() []Dataset {
 
 	for rows.Next() {
 		v := Dataset{}
-		rows.Scan(&v.ID, &v.Ticker, &v.Scale, &v.Start, &v.End)
+		rows.Scan(&v.ID, &v.Symbol, &v.Scale, &v.Start, &v.End)
 
 		arr = append(arr, v)
 	}
@@ -61,10 +61,10 @@ func GetSets() []Dataset {
 func InsertRhQuote(r RhQuote) error {
 	v := r.ToMoment()
 
-	_, err := DB.Exec("INSERT INTO MOMENT (" +
-		"ask_price, ask_size, bid_price, bid_size," +
-		"last_trade_price, symbol, updated_at" +
-		") values (?,?,?,?,?,?,?)",
+	_, err := DB.Exec("INSERT INTO MOMENT " +
+		"(ask_price, ask_size, bid_price, bid_size," +
+		"last_trade_price, symbol, updated_at) " +
+		"VALUES (?,?,?,?,?,?,?);",
 		v.AskPrice, v.AskSize, v.BidPrice, v.BidSize,
 		v.LastTradePrice, v.Symbol, v.UpdatedAt,
 	)
@@ -76,5 +76,12 @@ func InsertRhQuote(r RhQuote) error {
 }
 
 func InsertDataset(v Dataset) error {
-	return nil
+
+	_, err := DB.Exec("INSERT INTO sets" +
+		"(symbol, scale, start, end, `table`) " +
+		"VALUES (?,?,?,?,?);",
+		v.Symbol, int(v.Scale), v.Start, v.End, string(v.Table),
+	)
+
+	return err
 }

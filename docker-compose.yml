@@ -1,17 +1,17 @@
 version: '2'
 
 services:
-  mysql:
-    build: ./mysql
-    container_name: m0ney-mysql
+  db:
+    build: ./db
+    container_name: m0ney-db
     environment:
       MYSQL_ROOT_PASSWORD: "hello1"
     restart: always
 
   m0ney:
     depends_on:
-      - mysql
+      - db
     build: .
     container_name: m0ney-system
     ports:
-      - "80:80"
+      - "8080:8080"

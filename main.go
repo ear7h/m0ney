@@ -10,12 +10,6 @@ import (
 	"m0ney/sessions"
 )
 
-func init() {
-	time.Sleep(1000 * time.Hour)
-}
-
-
-
 func handleList(w http.ResponseWriter, r *http.Request) {
 	arr := data.GetSets()
 
@@ -36,7 +30,7 @@ func sessionFromDataset(req data.Dataset) (string, error) {
 		CurrentTime: req.Start,
 		EndTime: req.End,
 		Scale: req.Scale,
-		Ticker: req.Ticker,
+		Ticker: req.Symbol,
 		Table: req.Table,
 	})
 
@@ -69,7 +63,7 @@ func handleSessionCreate(w http.ResponseWriter, r *http.Request) {
 		SessStart: time.Now(),
 		Scale: req.Scale,
 		CurrentTime: req.Start,
-		Ticker: req.Ticker,
+		Ticker: req.Symbol,
 	})
 
 
@@ -130,5 +124,6 @@ func main() {
 	m.HandleFunc("/session/", handleSession)
 
 
-	http.ListenAndServe(":8080", m)
+	err := http.ListenAndServe(":8080", m)
+	panic(err)
 }
