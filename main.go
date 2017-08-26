@@ -10,6 +10,24 @@ import (
 	"m0ney/sessions"
 )
 
+
+//open db
+func init() {
+	byt, err := ioutil.ReadFile("config.json")
+	if err != nil {
+		panic(err)
+	}
+
+	var m map[string]string
+
+	err = json.Unmarshal(byt, &m)
+	if err != nil {
+		panic(err)
+	}
+	//user, password, host, port, database
+	data.Open(m["user"], m["password"], m["host"], m["port"], m["database"])
+}
+
 func handleList(w http.ResponseWriter, r *http.Request) {
 	arr := data.GetSets()
 
