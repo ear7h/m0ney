@@ -23,13 +23,14 @@ func insertPrices() {
 
 	addr := QUOTES_URL + strings.Join(SYMBOLS, ",")
 	fmt.Println(addr)
-	res, err := http.Get(addr)
+	resp, err := http.Get(addr)
 	if err != nil {
 		fmt.Fprint(os.Stderr,"could not get")
 		fmt.Println(err)
 	}
+	defer resp.Body.Close()
 
-	resData, err := ioutil.ReadAll(res.Body)
+	resData, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
 		panic(err)
 	}
@@ -56,12 +57,13 @@ func getMarketHours() (time.Time, time.Time) {
 	//tag for goto statement
 L:
 	//get today's market info
-	res, err := http.Get(url)
+	resp, err := http.Get(url)
 	if err != nil {
 		panic(err)
 	}
+	defer resp.Body.Close()
 
-	byt, err := ioutil.ReadAll(res.Body)
+	byt, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
 		panic(err)
 	}
