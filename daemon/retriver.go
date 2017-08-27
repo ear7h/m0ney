@@ -1,4 +1,4 @@
-package main
+package daemon
 
 import (
 	"time"
@@ -16,25 +16,8 @@ const (
 	NASDAQ_HOURS_URL = "https://api.robinhood.com/markets/XNAS/hours/"
 )
 
-var SYMBOLS []string
-var errcount = 0
+var SYMBOLS []string = []string{"AAL", "AAPL", "ADBE", "ADI", "ADP", "ADSK", "AKAM", "ALXN", "AMD", "AMAT", "AMGN", "AMZN", "ATVI", "AVGO", "BIDU", "BIIB", "BMRN", "CA", "CELG", "CERN", "CHKP", "CHTR", "CTRP", "CTAS", "CSCO", "CTXS", "CMCSA", "COST", "CSX", "CTSH", "DISCA", "DISCK", "DISH", "DLTR", "EA", "EBAY", "ESRX", "EXPE", "FAST", "FB", "FISV", "FOX", "FOXA", "GILD", "GOOG", "GOOGL", "HAS", "HSIC", "HOLX", "ILMN", "INCY", "INTC", "INTU", "ISRG", "JBHT", "JD", "KLAC", "KHC", "LBTYK", "LILA", "LBTYA", "QCOM", "QVCA", "MELI", "MAR", "MAT", "MDLZ", "MNST", "MSFT", "MU", "MXIM", "MYL", "NCLH", "NFLX", "NTES", "NVDA", "PAYX", "PCLN", "PYPL", "QCOM", "REGN", "ROST", "SHPG", "SIRI", "SWKS", "SBUX", "SYMC", "TSCO", "TXN", "TMUS", "ULTA", "VIAB", "VOD", "VRTX", "WBA", "WDC", "XRAY", "IDXX", "LILAK", "LRCX", "MCHP", "ORLY", "PCAR", "STX", "TSLA", "VRSK", "WYNN", "XLNX"}
 
-func init() {
-	config, err := ioutil.ReadFile("config.json")
-	if err != nil {
-		panic(err)
-	}
-
-	var m map[string][]string
-	err = json.Unmarshal(config, &m)
-	if err != nil {
-		panic(err)
-	}
-
-	SYMBOLS = m["symbols"]
-
-	fmt.Println("retriever initiated")
-}
 
 func insertPrices() {
 
@@ -42,9 +25,8 @@ func insertPrices() {
 	fmt.Println(addr)
 	res, err := http.Get(addr)
 	if err != nil {
+		fmt.Fprint(os.Stderr,"could not get")
 		fmt.Println(err)
-		errcount ++
-
 	}
 
 	resData, err := ioutil.ReadAll(res.Body)
@@ -132,20 +114,13 @@ func getMarketHours() (time.Time, time.Time) {
 
 }
 
-func addDataSets(start, end time.Time, scale time.Duration, sym []string) {
-	s := data.Dataset{
-		Start: start,
-		End: end,
-		Scale: scale,
-		Table: "moment",
-	}
+func addDataSets(sym []string, d time.Duration) {
+
 
 	for _, v := range sym {
-		s.Symbol = v
-		err := data.InsertDataset(s)
+		_, err := data.DB.Exec("INSERT INTO sets (`symbol`, `start`, `end`, `scale`, `table`) SELECT `symbol`, min(`updated_at`), max(`updated_at`), ?, 'moment' FROM moment WHERE `symbol` = ? AND DATE(`updated_at`) = DATE(NOW()) GROUP BY `symbol`;", d, v)
 		if err != nil {
 			panic(err)
-			os.Exit(1)
 		}
 	}
 
@@ -155,16 +130,16 @@ func dayLoop(start, end time.Time) {
 	fmt.Println("market open at: ", start)
 
 	//add data set after completion of day loop
-	defer func (t time.Time) {
-		addDataSets(t, time.Now(), time.Second, SYMBOLS)
-	}(time.Now())
+	defer func () {
+		addDataSets(SYMBOLS, time.Second)
+	}()
 
 	fmt.Println("retriever starting")
 
-	//for time.Now().Before(end) {
+	for time.Now().Before(end) {
 		time.Sleep(time.Second)
 		insertPrices()
-	//}
+	}
 
 	fmt.Println("retriver finished")
 

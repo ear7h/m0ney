@@ -4,6 +4,7 @@ import (
 	"database/sql"
 	_ "github.com/go-sql-driver/mysql"
 	"fmt"
+	"time"
 )
 
 const (
@@ -41,7 +42,7 @@ func Open(user, password, host, port, database string) {
 }
 
 func GetSets() []Dataset {
-	rows, err := DB.Query("SELECT * FROM sets;")
+	rows, err := DB.Query("SELECT `id`, `symbol`, `start`, `end`, `scale`, `table` FROM sets;")
 	if err != nil {
 		panic(err)
 	}
@@ -49,8 +50,28 @@ func GetSets() []Dataset {
 	arr := []Dataset{}
 
 	for rows.Next() {
-		v := Dataset{}
-		rows.Scan(&v.ID, &v.Symbol, &v.Scale, &v.Start, &v.End)
+		var (
+			id int
+			symbol string
+			start string
+			end string
+			scale int
+			table string
+		)
+
+		rows.Scan(&id, &symbol, &start, &end, &scale, &table)
+
+		ts, _ := time.Parse(SQL_TIME, start)
+		te, _ := time.Parse(SQL_TIME, end)
+
+		v := Dataset{
+			ID: id,
+			Symbol: symbol,
+			Start: ts,
+			End: te,
+			Scale: time.Duration(scale),
+			Table: Table(table),
+		}
 
 		arr = append(arr, v)
 	}

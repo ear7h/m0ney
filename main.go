@@ -8,6 +8,8 @@ import (
 	"io/ioutil"
 	"m0ney/data"
 	"m0ney/sessions"
+	"database/sql"
+	"m0ney/daemon"
 )
 
 func handleList(w http.ResponseWriter, r *http.Request) {
@@ -23,24 +25,10 @@ func handleList(w http.ResponseWriter, r *http.Request) {
 	w.Write(byt)
 }
 
-func sessionFromDataset(req data.Dataset) (string, error) {
-
-	token := sessions.Create(&sessions.Session{
-		SessStart: time.Now(),
-		CurrentTime: req.Start,
-		EndTime: req.End,
-		Scale: req.Scale,
-		Ticker: req.Symbol,
-		Table: req.Table,
-	})
-
-	return token, nil
-}
-
 func handleSessionCreate(w http.ResponseWriter, r *http.Request) {
 	//post request creates session
 	if r.Method != http.MethodPost {
-		http.Error(w, "send a POST request with dataset from /list or get request to /session/{token}", http.StatusMethodNotAllowed)
+		http.Error(w, "send a POST request with dataset id from /list or get request to /session/{token}", http.StatusMethodNotAllowed)
 		return
 	}
 
@@ -55,6 +43,44 @@ func handleSessionCreate(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		http.Error(w, "could not parse body", http.StatusBadRequest)
 		return
+	}
+
+	//the session request can specify and id or everything else
+	//if it only specifies the id we need to fill in everything else
+	if req.ID == 0 {
+		rows, err := data.DB.Query("SELECT `symbol`, `start`, `end`, `scale`, `table` FROM sets WHERE id = ?;", req.ID)
+		if err != nil {
+			if err == sql.ErrNoRows {
+				http.Error(w, "specified id could not be found", http.StatusNotFound)
+			} else {
+				panic(err)
+			}
+
+			return
+		}
+		defer rows.Close()
+
+		//scan values from query and fill (replace) req with data.Dataset values
+		var (
+			symbol string
+			start string
+			end string
+			scale int
+			table string
+		)
+
+		rows.Scan(&symbol, &start, &end, &scale, &table)
+
+		ts, _ := time.Parse(data.SQL_TIME, start)
+		te, _ := time.Parse(data.SQL_TIME, end)
+
+		req = data.Dataset{
+			Symbol: symbol,
+			Start: ts,
+			End: te,
+			Scale: time.Duration(scale),
+			Table: data.Table(table),
+		}
 	}
 
 
@@ -123,7 +149,11 @@ func main() {
 	m.HandleFunc("/session", handleSessionCreate)
 	m.HandleFunc("/session/", handleSession)
 
+	//start daemon
+	go daemon.Main()
 
+	//start server
+	//http.ListenAndServe() is a blocking call
 	err := http.ListenAndServe(":8080", m)
 	panic(err)
 }

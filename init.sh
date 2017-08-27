@@ -1,8 +1,11 @@
 #!/bin/sh
 
-echo waiting 15 seconds for db init
-sleep 15
+if [ $EAR7H_ENV = "prod" ]
+then
+    echo waiting 15 seconds for db init
+    sleep 15
+fi
 
-#echo hello world
-nohup m0ney > server.out
-nohup daemon/daemon > daemon.out
+
+echo starting server
+./m0ney | tee log.txt

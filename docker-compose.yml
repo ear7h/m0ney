@@ -5,7 +5,7 @@ services:
     build: ./db
     container_name: m0ney-db
     environment:
-      MYSQL_ROOT_PASSWORD: "hello1"
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
     restart: always
 
   m0ney:
@@ -13,5 +13,7 @@ services:
       - db
     build: .
     container_name: m0ney-system
+    environment:
+      EAR7H_ENV: "prod"
     ports:
       - "8080:8080"

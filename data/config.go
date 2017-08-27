@@ -1,19 +1,26 @@
 package data
 
-//prod
-//var mysqlCreds = map[string]string{
-//	"user":     "root",
-//	"password": "hello1",
-//	"host":     "db",
-//	"port":     "3306",
-//	"database": "stocks",
-//}
+import "os"
 
+var mysqlCreds map[string]string
 
-var mysqlCreds = map[string]string{
-	"user":     "root",
-	"password": "",
-	"host":     "",
-	"port":     "3306",
-	"database": "stocks",
+func init() {
+
+	if os.Getenv("EAR7H_ENV") == "prod" {
+		mysqlCreds = map[string]string{
+			"user":     "root",
+			"password": "",
+			"host":     "db",
+			"port":     "3306",
+			"database": "stocks",
+		}
+	} else {
+		mysqlCreds = map[string]string{
+			"user":     "root",
+			"password": "",
+			"host":     "",
+			"port":     "3306",
+			"database": "stocks",
+		}
+	}
 }

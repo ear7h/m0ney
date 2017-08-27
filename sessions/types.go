@@ -3,6 +3,7 @@ package sessions
 import (
 	"m0ney/data"
 	"time"
+	"fmt"
 )
 
 
@@ -24,9 +25,10 @@ func (s *Session) Next() interface{} {
 	topStr := s.CurrentTime.Add(s.Scale).Format(data.SQL_TIME)
 
 	rows, err := data.DB.Query(
-		"SELECT * FROM ? WHERE updated_at > DATETIME('?') AND updated_at <= DATETIME('?') ORDER BY updated_at DESC LIMIT 1;", s.Table ,topStr, bottomStr)
+		"SELECT * FROM `?` WHERE updated_at > ? AND updated_at <= ? ORDER BY updated_at DESC LIMIT 1;", s.Table ,topStr, bottomStr)
 
 	if err != nil {
+		fmt.Println(err)
 		return nil
 	}
 	defer rows.Close()

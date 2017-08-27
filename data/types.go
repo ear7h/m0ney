@@ -16,9 +16,9 @@ const (
 type Dataset struct {
 	ID     int           `json:"id"`
 	Symbol string        `json:"symbol"`
-	Scale  time.Duration `json:"scale"`
 	Start  time.Time     `json:"start"`
 	End    time.Time     `json:"end"`
+	Scale  time.Duration `json:"scale"`
 	Table  Table         `json:"table"`
 }
 
