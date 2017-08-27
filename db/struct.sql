@@ -21,6 +21,8 @@
 -- Current Database: `stocks`
 --
 
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
+
 CREATE DATABASE /*!32312 IF NOT EXISTS*/ `stocks` /*!40100 DEFAULT CHARACTER SET utf8 */;
 
 USE `stocks`;
