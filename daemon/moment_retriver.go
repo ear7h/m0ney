@@ -52,8 +52,11 @@ func insertPrices() {
 
 func getMarketHours() (time.Time, time.Time) {
 
+	url := NASDAQ_HOURS_URL + time.Now().Format("2006-01-02") + "/"
+	//tag for goto statement
+L:
 	//get today's market info
-	res, err := http.Get(NASDAQ_HOURS_URL + time.Now().Format("2006-01-02") + "/")
+	res, err := http.Get(url)
 	if err != nil {
 		panic(err)
 	}
@@ -71,8 +74,8 @@ func getMarketHours() (time.Time, time.Time) {
 	}
 
 
-	//if it's open today and the close time is in the future
-	//then assign a close time and return when open
+	//if the market is open on fetched day and the close time is in the future
+	//then parse time strings
 	if m["is_open"].(bool) {
 		openTime, err := time.Parse(time.RFC3339, m["opens_at"].(string))
 		closeTime, err := time.Parse(time.RFC3339, m["closes_at"].(string))
@@ -85,43 +88,18 @@ func getMarketHours() (time.Time, time.Time) {
 		}
 
 	}
-
-	nextOpenURL := m["next_open_hours"].(string)
-
-	//get next open day market info
-	res, err = http.Get(nextOpenURL)
-	if err != nil {
-		panic(err)
-	}
-
-	byt, err = ioutil.ReadAll(res.Body)
-	if err != nil {
-		panic(err)
-	}
-
-	err = json.Unmarshal(byt, &m)
-	if err != nil {
-		panic(err)
-	}
-
-	openTime, err := time.Parse(time.RFC3339, m["opens_at"].(string))
-	closeTime, err := time.Parse(time.RFC3339, m["closes_at"].(string))
-	if err != nil {
-		panic(err)
-	}
-
-	return openTime, closeTime
-
+	//else get the next open hours
+	url= m["next_open_hours"].(string)
+	//and fetch again
+	goto L
 }
 
-func addDataSets(sym []string, d time.Duration) {
+func insertDataSets(d time.Duration) {
 
+	_, err := data.DB.Exec("INSERT INTO sets (`symbol`, `start`, `end`, `scale`, `table`) SELECT `symbol`, min(`updated_at`), max(`updated_at`), ?, 'moment' FROM moment DATE(`updated_at`) = DATE(NOW()) GROUP BY `symbol`, DATE(`updated_at`) ;", d)
 
-	for _, v := range sym {
-		_, err := data.DB.Exec("INSERT INTO sets (`symbol`, `start`, `end`, `scale`, `table`) SELECT `symbol`, min(`updated_at`), max(`updated_at`), ?, 'moment' FROM moment WHERE `symbol` = ? AND DATE(`updated_at`) = DATE(NOW()) GROUP BY `symbol`;", d, v)
-		if err != nil {
-			panic(err)
-		}
+	if err != nil {
+		panic(err)
 	}
 
 }
@@ -131,14 +109,21 @@ func dayLoop(start, end time.Time) {
 
 	//add data set after completion of day loop
 	defer func () {
-		addDataSets(SYMBOLS, time.Second)
+		insertDataSets(time.Second)
 	}()
+
+	//if the market opens in the future
+	//then wait
+	if time.Now().Before(start) {
+		time.Sleep(start.Sub(time.Now()))
+	}
 
 	fmt.Println("retriever starting")
 
+	//fetch and insert prices until the close time is in the past
 	for time.Now().Before(end) {
-		time.Sleep(time.Second)
 		insertPrices()
+		time.Sleep(time.Second)
 	}
 
 	fmt.Println("retriver finished")
@@ -148,9 +133,9 @@ func dayLoop(start, end time.Time) {
 //program loop
 func momentRetriever() error {
 
-	//day loop
-	for start, end := getMarketHours(); true; {
-		dayLoop(start, end)
+	//program loop
+	for true {
+		dayLoop(getMarketHours())
 	}
 
 	return nil

@@ -41,13 +41,13 @@ func Open(user, password, host, port, database string) {
 	}
 }
 
-func GetSets() []Dataset {
+func GetSets() []Set {
 	rows, err := DB.Query("SELECT `id`, `symbol`, `start`, `end`, `scale`, `table` FROM sets;")
 	if err != nil {
 		panic(err)
 	}
 	defer rows.Close()
-	arr := []Dataset{}
+	arr := []Set{}
 
 	for rows.Next() {
 		var (
@@ -64,7 +64,7 @@ func GetSets() []Dataset {
 		ts, _ := time.Parse(SQL_TIME, start)
 		te, _ := time.Parse(SQL_TIME, end)
 
-		v := Dataset{
+		v := Set{
 			ID: id,
 			Symbol: symbol,
 			Start: ts,
@@ -83,26 +83,15 @@ func InsertRhQuote(r RhQuote) error {
 	v := r.ToMoment()
 
 	_, err := DB.Exec("INSERT INTO MOMENT " +
-		"(ask_price, ask_size, bid_price, bid_size," +
-		"last_trade_price, symbol, updated_at) " +
+		"(`ask_price`, `ask_size`, `bid_price`, `bid_size`," +
+		"`last_trade_price`, `symbol`, `trading_halted`, `updated_at`) " +
 		"VALUES (?,?,?,?,?,?,?);",
 		v.AskPrice, v.AskSize, v.BidPrice, v.BidSize,
-		v.LastTradePrice, v.Symbol, v.UpdatedAt,
+		v.LastTradePrice, v.Symbol, v.TradingHalted,v.UpdatedAt,
 	)
 
 	if err != nil {
 		return err
 	}
 	return nil
-}
-
-func InsertDataset(v Dataset) error {
-
-	_, err := DB.Exec("INSERT INTO sets" +
-		"(symbol, scale, start, end, `table`) " +
-		"VALUES (?,?,?,?,?);",
-		v.Symbol, int(v.Scale), v.Start, v.End, string(v.Table),
-	)
-
-	return err
 }

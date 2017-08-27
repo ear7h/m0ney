@@ -38,7 +38,7 @@ func handleSessionCreate(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	req := data.Dataset{}
+	req := data.Set{}
 	err = json.Unmarshal(byt, &req)
 	if err != nil {
 		http.Error(w, "could not parse body", http.StatusBadRequest)
@@ -60,7 +60,7 @@ func handleSessionCreate(w http.ResponseWriter, r *http.Request) {
 		}
 		defer rows.Close()
 
-		//scan values from query and fill (replace) req with data.Dataset values
+		//scan values from query and fill (replace) req with data.Set values
 		var (
 			symbol string
 			start string
@@ -74,7 +74,7 @@ func handleSessionCreate(w http.ResponseWriter, r *http.Request) {
 		ts, _ := time.Parse(data.SQL_TIME, start)
 		te, _ := time.Parse(data.SQL_TIME, end)
 
-		req = data.Dataset{
+		req = data.Set{
 			Symbol: symbol,
 			Start: ts,
 			End: te,

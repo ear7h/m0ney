@@ -1,3 +1,4 @@
 FROM mysql/mysql-server:latest
 
-COPY stocks-struct.sql /docker-entrypoint-initdb.d/stocks-struct.sql
+COPY struct.sql /docker-entrypoint-initdb.d/struct.sql
+COPY latest.sql /docker-entrypoint-initdb.d/latest.sql

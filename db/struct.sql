@@ -1,3 +1,5 @@
+# noinspection SqlNoDataSourceInspectionForFile
+
 -- MySQL dump 10.13  Distrib 5.7.19, for osx10.12 (x86_64)
 --
 -- Host: localhost    Database: stocks
@@ -15,7 +17,9 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
-GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
+--
+-- Current Database: `stocks`
+--
 
 CREATE DATABASE /*!32312 IF NOT EXISTS*/ `stocks` /*!40100 DEFAULT CHARACTER SET utf8 */;
 
@@ -34,8 +38,9 @@ CREATE TABLE `moment` (
   `bid_price` double DEFAULT NULL,
   `bid_size` int(11) DEFAULT NULL,
   `last_trade_price` double DEFAULT NULL,
-  `symbol` varchar(8) DEFAULT NULL,
-  `updated_at` datetime DEFAULT NULL
+  `symbol` varchar(8) NOT NULL,
+  `trading_halted` tinyint(1) DEFAULT NULL,
+  `updated_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -48,12 +53,13 @@ DROP TABLE IF EXISTS `sets`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `sets` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `start` datetime DEFAULT NULL,
-  `end` datetime DEFAULT NULL,
-  `scale` int(11) DEFAULT NULL,
-  `table` varchar(32) DEFAULT NULL,
+  `symbol` varchar(8) NOT NULL,
+  `start` datetime NOT NULL,
+  `end` datetime NOT NULL,
+  `scale` int(11) NOT NULL,
+  `table` varchar(32) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -65,4 +71,4 @@ CREATE TABLE `sets` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-08-24 22:29:35
+-- Dump completed on 2017-08-27 11:27:44
