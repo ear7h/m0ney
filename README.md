@@ -4,12 +4,10 @@
 
 ### Main
 * database back ups
-    * currently sh script but, should be servable /backup with auth header
+    * currently cron-ed command but, should be servable /backup with auth header
 * loop db connection attempt until success
     * this should actually happen on the DB.Ping call
     * will allow removal of init.sh
-* reshape tables (mysql structure file)
-    * add count column to sets table
 * better error handling than panic() on most errors
     * use log package
 
