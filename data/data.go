@@ -82,10 +82,10 @@ func GetSets() []Set {
 func InsertRhQuote(r RhQuote) error {
 	v := r.ToMoment()
 
-	_, err := DB.Exec("INSERT INTO MOMENT " +
+	_, err := DB.Exec("INSERT INTO moment " +
 		"(`ask_price`, `ask_size`, `bid_price`, `bid_size`," +
 		"`last_trade_price`, `symbol`, `trading_halted`, `updated_at`) " +
-		"VALUES (?,?,?,?,?,?,?);",
+		"VALUES (?,?,?,?,?,?,?,?);",
 		v.AskPrice, v.AskSize, v.BidPrice, v.BidSize,
 		v.LastTradePrice, v.Symbol, v.TradingHalted,v.UpdatedAt,
 	)

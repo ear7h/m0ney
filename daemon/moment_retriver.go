@@ -1,52 +1,53 @@
 package daemon
 
 import (
-	"time"
-	"net/http"
+	"encoding/json"
 	"fmt"
 	"io/ioutil"
-	"encoding/json"
-	"strings"
 	"m0ney/data"
-	"os"
+	"m0ney/log"
+	"net/http"
+	"strings"
+	"time"
 )
 
 const (
-	QUOTES_URL = "https://api.robinhood.com/quotes/?symbols="
+	QUOTES_URL       = "https://api.robinhood.com/quotes/?symbols="
 	NASDAQ_HOURS_URL = "https://api.robinhood.com/markets/XNAS/hours/"
 )
 
 var SYMBOLS []string = []string{"AAL", "AAPL", "ADBE", "ADI", "ADP", "ADSK", "AKAM", "ALXN", "AMD", "AMAT", "AMGN", "AMZN", "ATVI", "AVGO", "BIDU", "BIIB", "BMRN", "CA", "CELG", "CERN", "CHKP", "CHTR", "CTRP", "CTAS", "CSCO", "CTXS", "CMCSA", "COST", "CSX", "CTSH", "DISCA", "DISCK", "DISH", "DLTR", "EA", "EBAY", "ESRX", "EXPE", "FAST", "FB", "FISV", "FOX", "FOXA", "GILD", "GOOG", "GOOGL", "HAS", "HSIC", "HOLX", "ILMN", "INCY", "INTC", "INTU", "ISRG", "JBHT", "JD", "KLAC", "KHC", "LBTYK", "LILA", "LBTYA", "QCOM", "QVCA", "MELI", "MAR", "MAT", "MDLZ", "MNST", "MSFT", "MU", "MXIM", "MYL", "NCLH", "NFLX", "NTES", "NVDA", "PAYX", "PCLN", "PYPL", "QCOM", "REGN", "ROST", "SHPG", "SIRI", "SWKS", "SBUX", "SYMC", "TSCO", "TXN", "TMUS", "ULTA", "VIAB", "VOD", "VRTX", "WBA", "WDC", "XRAY", "IDXX", "LILAK", "LRCX", "MCHP", "ORLY", "PCAR", "STX", "TSLA", "VRSK", "WYNN", "XLNX"}
 
-
 func insertPrices() {
 
 	addr := QUOTES_URL + strings.Join(SYMBOLS, ",")
-	fmt.Println(addr)
+	log.Enter(0, addr)
 	resp, err := http.Get(addr)
 	if err != nil {
-		fmt.Fprint(os.Stderr,"could not get")
-		fmt.Println(err)
+		log.Enter(3, err)
+		return
 	}
 	defer resp.Body.Close()
 
 	resData, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
-		panic(err)
+		log.Enter(3, err)
+		return
 	}
-
 
 	var dat map[string][]data.RhQuote
 
 	err = json.Unmarshal(resData, &dat)
 	if err != nil {
-		panic(err)
+		log.Enter(3, err)
+		return
 	}
 
 	for _, v := range dat["results"] {
 		err := data.InsertRhQuote(v)
 		if err != nil {
-			panic(err)
+			log.Enter(3, err)
+			return
 		}
 	}
 }
@@ -59,22 +60,24 @@ L:
 	//get today's market info
 	resp, err := http.Get(url)
 	if err != nil {
-		panic(err)
+		log.Enter(3, err)
+		return time.Time{}, time.Time{}
 	}
 	defer resp.Body.Close()
 
 	byt, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
-		panic(err)
+		log.Enter(3, err)
+		return time.Time{}, time.Time{}
 	}
 
 	var m map[string]interface{}
 
 	err = json.Unmarshal(byt, &m)
 	if err != nil {
-		panic(err)
+		log.Enter(3, err)
+		return time.Time{}, time.Time{}
 	}
-
 
 	//if the market is open on fetched day and the close time is in the future
 	//then parse time strings
@@ -82,7 +85,8 @@ L:
 		openTime, err := time.Parse(time.RFC3339, m["opens_at"].(string))
 		closeTime, err := time.Parse(time.RFC3339, m["closes_at"].(string))
 		if err != nil {
-			panic(err)
+			log.Enter(3, err)
+			return time.Time{}, time.Time{}
 		}
 
 		if closeTime.After(time.Now()) {
@@ -91,17 +95,21 @@ L:
 
 	}
 	//else get the next open hours
-	url= m["next_open_hours"].(string)
+	url = m["next_open_hours"].(string)
 	//and fetch again
 	goto L
 }
 
 func insertDataSets(d time.Duration) {
 
-	_, err := data.DB.Exec("INSERT INTO sets (`symbol`, `start`, `end`, `scale`, `table`) SELECT `symbol`, min(`updated_at`), max(`updated_at`), ?, 'moment' FROM moment DATE(`updated_at`) = DATE(NOW()) GROUP BY `symbol`, DATE(`updated_at`) ;", d)
+	_, err := data.DB.Exec("INSERT INTO sets " +
+		"(`symbol`, `start`, `end`, `scale`, `table`) " +
+		"SELECT `symbol`, min(`updated_at`), max(`updated_at`), ?, 'moment' FROM `moment` " +
+		"WHERE DATE(`updated_at`) = DATE(NOW()) GROUP BY `symbol`, DATE(`updated_at`) ;", d)
 
 	if err != nil {
-		panic(err)
+		log.Enter(3, err)
+		return
 	}
 
 }
@@ -110,7 +118,7 @@ func dayLoop(start, end time.Time) {
 	fmt.Println("market open at: ", start)
 
 	//add data set after completion of day loop
-	defer func () {
+	defer func() {
 		insertDataSets(time.Second)
 	}()
 
@@ -137,10 +145,16 @@ func momentRetriever() error {
 
 	//program loop
 	for true {
-		dayLoop(getMarketHours())
+		s, e := getMarketHours()
+
+		for (time.Time{} == s) || (time.Time{} == e) {
+			time.Sleep(10 * time.Second)
+			log.Enter(1, "trying again")
+			s, e = getMarketHours()
+		}
+
+		dayLoop(s, e)
 	}
 
 	return nil
 }
-
-

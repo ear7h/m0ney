@@ -8,8 +8,7 @@
 * loop db connection attempt until success
     * this should actually happen on the DB.Ping call
     * will allow removal of init.sh
-* better error handling than panic() on most errors
-    * use log package
+* work on readme
 
 ### Future plans
 * find a way to run this service alongside regular website
