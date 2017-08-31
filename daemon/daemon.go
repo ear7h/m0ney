@@ -1,4 +1,4 @@
-package daemon
+package main
 
 import (
 	"os"
@@ -8,7 +8,7 @@ import (
 
 //the main function should be used to spawn maintenance goroutines which run indefinitely
 
-func Main() {
+func main() {
 	err := make(chan error, 1)
 
 

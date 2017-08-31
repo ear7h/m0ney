@@ -1,2 +1,2 @@
-0 16 * * 1,2,3,4,5 docker exec -it m0ney-db mysqldump --databases stocks > data/$(date +%Y-%m-%d).sql && docker exec -it m0ney-db mysqldump --databases stocks > latest.sql
+0 16 * * 1,2,3,4,5 docker exec -it m0ney-db mysqldump --databases stocks > /home/m0ney/db/data/$(date +%Y-%m-%d).sql && docker exec -it m0ney-db mysqldump --databases stocks > /home/m0ney/db/data/latest.sql
 

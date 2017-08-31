@@ -1,4 +1,4 @@
-package daemon
+package main
 
 import (
 	"encoding/json"
@@ -140,7 +140,7 @@ func dayLoop(start, end time.Time) {
 
 }
 
-//program loop
+//program entry point
 func momentRetriever() error {
 
 	//program loop

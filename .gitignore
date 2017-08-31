@@ -1,5 +1,5 @@
 # Ignore binary
-m0ney
+server/server
 
 #ignore databae backups files
 db/data/*

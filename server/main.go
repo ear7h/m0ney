@@ -9,7 +9,6 @@ import (
 	"m0ney/data"
 	"m0ney/sessions"
 	"database/sql"
-	"m0ney/daemon"
 )
 
 func handleList(w http.ResponseWriter, r *http.Request) {
@@ -149,8 +148,6 @@ func main() {
 	m.HandleFunc("/session", handleSessionCreate)
 	m.HandleFunc("/session/", handleSession)
 
-	//start daemon
-	go daemon.Main()
 
 	//start server
 	//http.ListenAndServe() is a blocking call
