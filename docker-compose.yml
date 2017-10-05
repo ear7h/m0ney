@@ -8,11 +8,11 @@ services:
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
     restart: always
 
-  m0ney:
+  server:
     depends_on:
       - db
     build: .
-    container_name: m0ney-system
+    container_name: m0ney-server
     environment:
       EAR7H_ENV: "prod"
     ports:
