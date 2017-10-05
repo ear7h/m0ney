@@ -6,6 +6,7 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 	"time"
 	"m0ney/log"
+	"os"
 )
 
 const (
@@ -16,28 +17,15 @@ var DB *sql.DB
 
 //open db
 func init() {
-	m := mysqlCreds
+	user := "root"
+	password := ""
+	host := ""
+	port :=     "3306"
+	database := "stocks"
 
-	//user, password, host, port, database
-	err := Open(m["user"], m["password"], m["host"], m["port"], m["database"])
-
-	if err != nil {
-		fmt.Println("DB Open failed will try 3 more times")
-		for i := 0;i < 3 ; i++  {
-			time.Sleep(5 * time.Second)
-			fmt.Println("Trying again")
-			err = Open(m["user"], m["password"], m["host"], m["port"], m["database"])
-			if err == nil {
-				fmt.Println("good")
-				break
-			} else {
-				fmt.Println("fail")
-			}
-		}
+	if os.Getenv("EAR7H_ENV") == "prod" {
+			host =  "db"
 	}
-}
-
-func Open(user, password, host, port, database string) error {
 
 	url := fmt.Sprint(user, ":", password, "@(", host, ":", port, ")/", database)
 
@@ -46,17 +34,9 @@ func Open(user, password, host, port, database string) error {
 	var err error
 	DB, err = sql.Open("mysql", url)
 	if err != nil {
-		return err
+		panic(err)
 	}
 
-	err = DB.Ping()
-	if err != nil {
-		return err
-	} else {
-		fmt.Println("database connection successful")
-	}
-
-	return nil
 }
 
 func GetSets() []Set {
