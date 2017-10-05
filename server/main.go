@@ -24,6 +24,18 @@ func handleList(w http.ResponseWriter, r *http.Request) {
 	w.Write(byt)
 }
 
+func handleSet(w http.ResponseWriter, r *http.Request) {
+	arr := data.GetSet(1)
+
+	byt, err := json.Marshal(arr)
+	if err != nil {
+		http.Error(w, "couldn't marshall response", http.StatusInternalServerError)
+	}
+
+	w.WriteHeader(http.StatusOK)
+	w.Write(byt)
+}
+
 func handleSessionCreate(w http.ResponseWriter, r *http.Request) {
 	//post request creates session
 	if r.Method != http.MethodPost {
