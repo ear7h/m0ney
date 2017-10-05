@@ -19,10 +19,25 @@ func init() {
 	m := mysqlCreds
 
 	//user, password, host, port, database
-	Open(m["user"], m["password"], m["host"], m["port"], m["database"])
+	err := Open(m["user"], m["password"], m["host"], m["port"], m["database"])
+
+	if err != nil {
+		fmt.Println("DB Open failed will try 3 more times")
+		for i := 0;i < 3 ; i++  {
+			time.Sleep(5 * time.Second)
+			fmt.Println("Trying again")
+			err = Open(m["user"], m["password"], m["host"], m["port"], m["database"])
+			if err == nil {
+				fmt.Println("good")
+				break
+			} else {
+				fmt.Println("fail")
+			}
+		}
+	}
 }
 
-func Open(user, password, host, port, database string) {
+func Open(user, password, host, port, database string) error {
 
 	url := fmt.Sprint(user, ":", password, "@(", host, ":", port, ")/", database)
 
@@ -31,15 +46,17 @@ func Open(user, password, host, port, database string) {
 	var err error
 	DB, err = sql.Open("mysql", url)
 	if err != nil {
-		panic(err)
+		return err
 	}
 
 	err = DB.Ping()
 	if err != nil {
-		panic(err)
+		return err
 	} else {
 		fmt.Println("database connection successful")
 	}
+
+	return nil
 }
 
 func GetSets() []Set {

@@ -9,4 +9,4 @@ COPY . .
 RUN go get ./...
 RUN go build
 
-CMD ["./init.sh"]
+CMD ["./m0ney"]
