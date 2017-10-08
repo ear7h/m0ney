@@ -114,12 +114,8 @@ func insertDataSets(d time.Duration) {
 }
 
 func dayLoop(start, end time.Time) {
-	fmt.Println()
-
 	//add data set after completion of day loop
-	defer func() {
-		insertDataSets(time.Second)
-	}()
+	defer insertDataSets(time.Second)
 
 	//if the market opens in the future
 	//then wait
