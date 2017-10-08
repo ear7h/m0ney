@@ -114,7 +114,7 @@ func insertDataSets(d time.Duration) {
 }
 
 func dayLoop(start, end time.Time) {
-	fmt.Println("market open at: ", start)
+	fmt.Println()
 
 	//add data set after completion of day loop
 	defer func() {
@@ -171,10 +171,12 @@ func momentRetriever() error {
 		s, e := getMarketHours()
 
 		for (time.Time{} == s) || (time.Time{} == e) {
+			log.Enter(log.WARNING, "could not market hrs trying again in 10 seconds")
 			time.Sleep(10 * time.Second)
-			log.Enter(1, "trying again")
 			s, e = getMarketHours()
 		}
+
+		log.Enter(log.OK, "market hrs: ", s, " - ", e)
 
 		if !shouldRunToday() {
 			time.Sleep(time.Until(e))
