@@ -42,6 +42,7 @@ func init() {
 func GetSets() []Set {
 	rows, err := DB.Query("SELECT `id`, `symbol`, `start`, `end`, `scale`, `table` FROM sets;")
 	if err != nil {
+		log.Enter(log.ERROR, err)
 		panic(err)
 	}
 	defer rows.Close()
@@ -81,7 +82,7 @@ func GetSet(i int) (ret []Moment) {
 
 	rows, err := DB.Query("SELECT symbol, date(start) FROM sets WHERE id = ?", i)
 	if err != nil {
-		log.Enter(3, err)
+		log.Enter(log.ERROR, err)
 		return
 	}
 
@@ -92,7 +93,7 @@ func GetSet(i int) (ret []Moment) {
 
 	err = rows.Scan(&sym, &start)
 	if err != nil {
-		log.Enter(3, err)
+		log.Enter(log.ERROR, err)
 	}
 	rows.Close()
 
@@ -108,7 +109,7 @@ WHERE
 	AND date(updated_at) = date(?)
 GROUP BY hour(updated_at) asc, minute(updated_at) asc;`, sym, sym, start)
 	if err != nil {
-		log.Enter(3, err)
+		log.Enter(log.ERROR, err)
 		return []Moment{}
 	}
 	defer rows.Close()
@@ -135,7 +136,7 @@ GROUP BY hour(updated_at) asc, minute(updated_at) asc;`, sym, sym, start)
 			&updatedAt,
 		)
 		if err != nil {
-			log.Enter(3, err)
+			log.Enter(log.ERROR, err)
 			return
 		}
 

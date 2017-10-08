@@ -20,17 +20,17 @@ var SYMBOLS []string = []string{"AAL", "AAPL", "ADBE", "ADI", "ADP", "ADSK", "AK
 
 func insertPrices() {
 	addr := QUOTES_URL + strings.Join(SYMBOLS, ",")
-	log.Enter(0, addr)
+	log.Enter(log.OK, addr)
 	resp, err := http.Get(addr)
 	if err != nil {
-		log.Enter(3, err)
+		log.Enter(log.ERROR, err)
 		return
 	}
 	defer resp.Body.Close()
 
 	resData, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
-		log.Enter(3, err)
+		log.Enter(log.ERROR, err)
 		return
 	}
 
@@ -38,14 +38,14 @@ func insertPrices() {
 
 	err = json.Unmarshal(resData, &dat)
 	if err != nil {
-		log.Enter(3, err)
+		log.Enter(log.ERROR, err)
 		return
 	}
 
 	for _, v := range dat["results"] {
 		err := data.InsertRhQuote(v)
 		if err != nil {
-			log.Enter(3, err)
+			log.Enter(log.ERROR, err)
 			return
 		}
 	}
@@ -59,14 +59,14 @@ L:
 	//get today's market info
 	resp, err := http.Get(url)
 	if err != nil {
-		log.Enter(3, err)
+		log.Enter(log.ERROR, err)
 		return time.Time{}, time.Time{}
 	}
 	defer resp.Body.Close()
 
 	byt, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
-		log.Enter(3, err)
+		log.Enter(log.ERROR, err)
 		return time.Time{}, time.Time{}
 	}
 
@@ -74,7 +74,7 @@ L:
 
 	err = json.Unmarshal(byt, &m)
 	if err != nil {
-		log.Enter(3, err)
+		log.Enter(log.ERROR, err)
 		return time.Time{}, time.Time{}
 	}
 
@@ -84,7 +84,7 @@ L:
 		openTime, err := time.Parse(time.RFC3339, m["opens_at"].(string))
 		closeTime, err := time.Parse(time.RFC3339, m["closes_at"].(string))
 		if err != nil {
-			log.Enter(3, err)
+			log.Enter(log.ERROR, err)
 			return time.Time{}, time.Time{}
 		}
 
@@ -107,7 +107,7 @@ func insertDataSets(d time.Duration) {
 		"WHERE DATE(`updated_at`) = DATE(NOW()) GROUP BY `symbol`, DATE(`updated_at`) ;", d)
 
 	if err != nil {
-		log.Enter(3, err)
+		log.Enter(log.ERROR, err)
 		return
 	}
 
@@ -140,20 +140,26 @@ func dayLoop(start, end time.Time) {
 }
 
 //checks config to see if the retriever should run another loop
-func shouldRunToday() bool {
+func shouldRunToday() (retrieveAnother bool) {
 	byt, err := ioutil.ReadFile("config.json")
 	if err != nil {
-		panic(err)
+		log.Enter(log.ERROR, err)
+		return false
 	}
 
 	v := map[string]bool{}
 
 	err = json.Unmarshal(byt, &v)
 	if err != nil {
-		panic(err)
+		log.Enter(log.ERROR, err)
+		return false
 	}
 
-	return v["retrieveAnother"]
+
+	retrieveAnother = v["retrieveAnother"]
+	log.Enter(log.OK, "retrieveAnother = ", retrieveAnother)
+
+	return
 
 }
 

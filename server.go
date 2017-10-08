@@ -1,10 +1,10 @@
 package main
 
 import (
-	"net/http"
 	"encoding/json"
 	"fmt"
 	"github.com/ear7h/m0ney/data"
+	"net/http"
 	"strconv"
 	"strings"
 )
@@ -30,7 +30,6 @@ func handleSet(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-
 	i, err := strconv.ParseInt(arr[2], 10, 64)
 	if err != nil || i < 1 {
 		http.Error(w, "path must be /set/{integer > 1}", http.StatusBadRequest)
@@ -49,7 +48,6 @@ func handleSet(w http.ResponseWriter, r *http.Request) {
 	w.Write(byt)
 }
 
-
 //entry point for server
 func main() {
 	fmt.Println("starting")
@@ -61,7 +59,6 @@ func main() {
 
 	//get the data set
 	m.HandleFunc("/set/", handleSet)
-
 
 	//start server
 	//http.ListenAndServe() is a blocking call
