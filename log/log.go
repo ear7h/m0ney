@@ -27,7 +27,7 @@ func Enter(level string, v ...interface{}) {
 
 
 	if !ok {
-		fmt.Fprintf(OUT, "%s\t| Level: %d | On _ of _ | %s\n",
+		fmt.Fprintf(OUT, "%s\t| Level: %s | On _ of _ | %s\n",
 			time.Now().Format(time.RFC1123),
 			level,
 			fmt.Sprint(v...),
@@ -35,7 +35,7 @@ func Enter(level string, v ...interface{}) {
 		return
 	}
 
-	fmt.Fprintf(OUT, "%s\t| Level: %d | On %d of %s | %+v\n",
+	fmt.Fprintf(OUT, "%s\t| Level: %s | On %d of %s | %+v\n",
 		time.Now().Format(time.RFC1123),
 		level,
 		line, f,

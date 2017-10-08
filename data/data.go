@@ -43,7 +43,7 @@ func GetSets() []Set {
 	rows, err := DB.Query("SELECT `id`, `symbol`, `start`, `end`, `scale`, `table` FROM sets;")
 	if err != nil {
 		log.Enter(log.ERROR, err)
-		panic(err)
+		return []Set{}
 	}
 	defer rows.Close()
 	arr := []Set{}
