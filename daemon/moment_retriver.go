@@ -139,6 +139,24 @@ func dayLoop(start, end time.Time) {
 
 }
 
+//checks config to see if the retriever should run another loop
+func shouldRunToday() bool {
+	byt, err := ioutil.ReadFile("config.json")
+	if err != nil {
+		panic(err)
+	}
+
+	v := map[string]bool{}
+
+	err = json.Unmarshal(byt, &v)
+	if err != nil {
+		panic(err)
+	}
+
+	return v["retrieveAnother"]
+
+}
+
 //program entry point
 func momentRetriever() error {
 
@@ -150,6 +168,11 @@ func momentRetriever() error {
 			time.Sleep(10 * time.Second)
 			log.Enter(1, "trying again")
 			s, e = getMarketHours()
+		}
+
+		if !shouldRunToday() {
+			time.Sleep(time.Until(e))
+			continue
 		}
 
 		dayLoop(s, e)
