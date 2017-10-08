@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"encoding/json"
 	"fmt"
-	"m0ney/data"
+	"github.com/ear7h/m0ney/data"
 	"strconv"
 	"strings"
 )

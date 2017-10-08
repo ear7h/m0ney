@@ -5,7 +5,7 @@ import (
 	"fmt"
 	_ "github.com/go-sql-driver/mysql"
 	"time"
-	"m0ney/log"
+	"github.com/ear7h/m0ney/log"
 	"os"
 )
 
