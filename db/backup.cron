@@ -1,1 +1,1 @@
-0 17 * * 1,2,3,4,5 /usr/bin/docker exec -it m0ney-db mysqldump --databases stocks | gzip > /home/ear7h/m0ney/db/data/$(date +%Y-%m-%d).sql.gz && /usr/local/bin/docker exec -it m0ney-db mysqldump --databases stocks > /home/ear7h/m0ney/db/data/b-latest.sql
+0 17 * * 1,2,3,4,5 /usr/bin/docker exec -it m0ney-db mysqldump --databases stocks | gzip > /home/ear7h/m0ney/db/data/$(date +%Y-%m-%d).sql.gz && /usr/bin/docker exec -it m0ney-db mysqldump --databases stocks > /home/ear7h/m0ney/db/data/b-latest.sql
