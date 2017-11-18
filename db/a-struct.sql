@@ -23,45 +23,48 @@
 
 GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
 
-CREATE DATABASE /*!32312 IF NOT EXISTS*/ `stocks` /*!40100 DEFAULT CHARACTER SET utf8 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `money` /*!40100 DEFAULT CHARACTER SET utf8 */;
 
-USE `stocks`;
+USE `money`;
+
+-- For stage tables
+SET GLOBAL max_heap_table_size = 99999744;
 
 --
--- Table structure for table `moment`
+-- Table structure for table `partitions`
 --
 
-DROP TABLE IF EXISTS `moment`;
+DROP TABLE IF EXISTS `partitions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `moment` (
-  `ask_price` double DEFAULT NULL,
-  `ask_size` int(11) DEFAULT NULL,
-  `bid_price` double DEFAULT NULL,
-  `bid_size` int(11) DEFAULT NULL,
-  `last_trade_price` double DEFAULT NULL,
-  `symbol` varchar(8) NOT NULL,
-  `trading_halted` tinyint(1) DEFAULT NULL,
-  `updated_at` datetime NOT NULL
+CREATE TABLE `partitions` (
+  `name` varchar(64) NOT NULL,
+  `week_of` datetime NOT NULL,
+  UNIQUE KEY `week_of` (`week_of`),
+  UNIQUE KEY `name` (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `sets`
+-- Table structure for table `runs`
 --
 
-DROP TABLE IF EXISTS `sets`;
+DROP TABLE IF EXISTS `runs`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `sets` (
+CREATE TABLE `runs` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `symbol` varchar(8) NOT NULL,
   `start` datetime NOT NULL,
   `end` datetime NOT NULL,
-  `scale` int(11) NOT NULL,
-  `table` varchar(32) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
+  `partition_name` varchar(64) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `partition_name` (`partition_name`),
+  CONSTRAINT `runs_ibfk_1` FOREIGN KEY (`partition_name`) REFERENCES `partitions` (`name`)
+) ENGINE=InnoDB AUTO_INCREMENT=8046 DEFAULT CHARSET=utf8;
+
+
+/*!40101 SET character_set_client = @saved_cs_client */;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
