@@ -1,0 +1,2711 @@
+[{
+    "ask_price": 121.74,
+    "ask_size": 400,
+    "bid_price": 121.7,
+    "bid_size": 200,
+    "last_trade_price": 121.84999999999998,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T16:27:56Z"
+  },
+  {
+    "ask_price": 121.70195652173913,
+    "ask_size": 400,
+    "bid_price": 121.65652173913037,
+    "bid_size": 145,
+    "last_trade_price": 121.85804347826091,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T16:28:07Z"
+  },
+  {
+    "ask_price": 121.7695121951219,
+    "ask_size": 400,
+    "bid_price": 121.72780487804879,
+    "bid_size": 100,
+    "last_trade_price": 121.80367804878041,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T16:29:10Z"
+  },
+  {
+    "ask_price": 121.91749999999999,
+    "ask_size": 287,
+    "bid_price": 121.88000000000008,
+    "bid_size": 175,
+    "last_trade_price": 121.78374999999997,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T16:30:05Z"
+  },
+  {
+    "ask_price": 121.93000000000004,
+    "ask_size": 265,
+    "bid_price": 121.87586956521739,
+    "bid_size": 258,
+    "last_trade_price": 121.64478260869556,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T16:31:00Z"
+  },
+  {
+    "ask_price": 121.92083333333325,
+    "ask_size": 316,
+    "bid_price": 121.86083333333339,
+    "bid_size": 154,
+    "last_trade_price": 121.69687500000003,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T16:32:04Z"
+  },
+  {
+    "ask_price": 121.77466666666669,
+    "ask_size": 233,
+    "bid_price": 121.70666666666672,
+    "bid_size": 405,
+    "last_trade_price": 121.78759999999986,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T16:33:08Z"
+  },
+  {
+    "ask_price": 121.75,
+    "ask_size": 200,
+    "bid_price": 121.72000000000001,
+    "bid_size": 1500,
+    "last_trade_price": 121.83999999999999,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T16:34:49Z"
+  },
+  {
+    "ask_price": 121.71597222222216,
+    "ask_size": 336,
+    "bid_price": 121.67430555555539,
+    "bid_size": 663,
+    "last_trade_price": 121.82944444444459,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T16:35:06Z"
+  },
+  {
+    "ask_price": 121.69999999999999,
+    "ask_size": 400,
+    "bid_price": 121.67000000000003,
+    "bid_size": 100,
+    "last_trade_price": 121.8480952380952,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T16:36:47Z"
+  },
+  {
+    "ask_price": 121.70823529411757,
+    "ask_size": 400,
+    "bid_price": 121.68235294117643,
+    "bid_size": 100,
+    "last_trade_price": 121.86999999999992,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T16:37:16Z"
+  },
+  {
+    "ask_price": 121.7630434782608,
+    "ask_size": 439,
+    "bid_price": 121.7273913043479,
+    "bid_size": 139,
+    "last_trade_price": 121.83260869565214,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T16:38:03Z"
+  },
+  {
+    "ask_price": 121.82999999999994,
+    "ask_size": 360,
+    "bid_price": 121.77930232558138,
+    "bid_size": 288,
+    "last_trade_price": 121.7955813953489,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T16:39:05Z"
+  },
+  {
+    "ask_price": 121.84369565217382,
+    "ask_size": 154,
+    "bid_price": 121.80369565217384,
+    "bid_size": 308,
+    "last_trade_price": 121.74804347826073,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T16:40:05Z"
+  },
+  {
+    "ask_price": 121.85350877192995,
+    "ask_size": 164,
+    "bid_price": 121.82649122807014,
+    "bid_size": 135,
+    "last_trade_price": 121.7113157894737,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T16:41:06Z"
+  },
+  {
+    "ask_price": 121.87525423728823,
+    "ask_size": 225,
+    "bid_price": 121.84542372881367,
+    "bid_size": 116,
+    "last_trade_price": 121.67593220338989,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T16:42:23Z"
+  },
+  {
+    "ask_price": 121.88833333333336,
+    "ask_size": 450,
+    "bid_price": 121.84166666666665,
+    "bid_size": 266,
+    "last_trade_price": 121.6366666666667,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T16:43:44Z"
+  },
+  {
+    "ask_price": 121.86599999999994,
+    "ask_size": 380,
+    "bid_price": 121.81200000000017,
+    "bid_size": 260,
+    "last_trade_price": 121.55460000000002,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T16:44:00Z"
+  },
+  {
+    "ask_price": 121.82999999999996,
+    "ask_size": 246,
+    "bid_price": 121.77000000000007,
+    "bid_size": 338,
+    "last_trade_price": 121.5,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T16:45:07Z"
+  },
+  {
+    "ask_price": 121.76333333333336,
+    "ask_size": 375,
+    "bid_price": 121.69444444444453,
+    "bid_size": 322,
+    "last_trade_price": 121.49311111111122,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T16:46:01Z"
+  },
+  {
+    "ask_price": 121.70484848484857,
+    "ask_size": 439,
+    "bid_price": 121.64363636363639,
+    "bid_size": 160,
+    "last_trade_price": 121.53621212121216,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T16:47:03Z"
+  },
+  {
+    "ask_price": 121.71999999999996,
+    "ask_size": 482,
+    "bid_price": 121.6782608695652,
+    "bid_size": 186,
+    "last_trade_price": 121.61695652173916,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T16:48:31Z"
+  },
+  {
+    "ask_price": 121.78439999999988,
+    "ask_size": 454,
+    "bid_price": 121.73520000000006,
+    "bid_size": 154,
+    "last_trade_price": 121.64999999999996,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T16:49:03Z"
+  },
+  {
+    "ask_price": 121.865744680851,
+    "ask_size": 342,
+    "bid_price": 121.81723404255315,
+    "bid_size": 157,
+    "last_trade_price": 121.55065531914909,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T16:50:10Z"
+  },
+  {
+    "ask_price": 121.85984848484856,
+    "ask_size": 278,
+    "bid_price": 121.81772727272742,
+    "bid_size": 189,
+    "last_trade_price": 121.43984848484843,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T16:51:15Z"
+  },
+  {
+    "ask_price": 121.89821428571433,
+    "ask_size": 107,
+    "bid_price": 121.83892857142861,
+    "bid_size": 103,
+    "last_trade_price": 121.34000000000005,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T16:52:43Z"
+  },
+  {
+    "ask_price": 121.89999999999999,
+    "ask_size": 100,
+    "bid_price": 121.84000000000007,
+    "bid_size": 178,
+    "last_trade_price": 121.36792682926823,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T16:53:22Z"
+  },
+  {
+    "ask_price": 121.84580645161299,
+    "ask_size": 100,
+    "bid_price": 121.78032258064515,
+    "bid_size": 132,
+    "last_trade_price": 121.36612903225809,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T16:54:17Z"
+  },
+  {
+    "ask_price": 121.79837837837843,
+    "ask_size": 181,
+    "bid_price": 121.75405405405417,
+    "bid_size": 100,
+    "last_trade_price": 121.35554054054049,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T16:55:00Z"
+  },
+  {
+    "ask_price": 121.7725,
+    "ask_size": 375,
+    "bid_price": 121.72500000000002,
+    "bid_size": 100,
+    "last_trade_price": 121.31999999999995,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T16:56:40Z"
+  },
+  {
+    "ask_price": 121.75981818181818,
+    "ask_size": 400,
+    "bid_price": 121.70981818181806,
+    "bid_size": 354,
+    "last_trade_price": 121.23599999999988,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T16:57:02Z"
+  },
+  {
+    "ask_price": 121.72567567567559,
+    "ask_size": 254,
+    "bid_price": 121.67567567567568,
+    "bid_size": 502,
+    "last_trade_price": 121.21040540540538,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T16:58:16Z"
+  },
+  {
+    "ask_price": 121.65238095238098,
+    "ask_size": 195,
+    "bid_price": 121.60238095238107,
+    "bid_size": 352,
+    "last_trade_price": 121.09095238095242,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T16:59:06Z"
+  },
+  {
+    "ask_price": 121.57249999999995,
+    "ask_size": 437,
+    "bid_price": 121.50875000000003,
+    "bid_size": 254,
+    "last_trade_price": 121.0814583333334,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:00:03Z"
+  },
+  {
+    "ask_price": 121.52610169491544,
+    "ask_size": 530,
+    "bid_price": 121.45305084745752,
+    "bid_size": 130,
+    "last_trade_price": 121.08872881355938,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:01:09Z"
+  },
+  {
+    "ask_price": 121.53461538461536,
+    "ask_size": 207,
+    "bid_price": 121.4792307692307,
+    "bid_size": 173,
+    "last_trade_price": 121.11000000000003,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:02:29Z"
+  },
+  {
+    "ask_price": 121.56441860465111,
+    "ask_size": 204,
+    "bid_price": 121.51790697674409,
+    "bid_size": 200,
+    "last_trade_price": 121.18695348837211,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:03:03Z"
+  },
+  {
+    "ask_price": 121.65090909090901,
+    "ask_size": 445,
+    "bid_price": 121.60636363636358,
+    "bid_size": 200,
+    "last_trade_price": 121.32659090909087,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:04:01Z"
+  },
+  {
+    "ask_price": 121.65958333333327,
+    "ask_size": 354,
+    "bid_price": 121.61416666666666,
+    "bid_size": 152,
+    "last_trade_price": 121.4035416666667,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:05:02Z"
+  },
+  {
+    "ask_price": 121.57645161290338,
+    "ask_size": 158,
+    "bid_price": 121.51193548387079,
+    "bid_size": 109,
+    "last_trade_price": 121.43841935483854,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:06:07Z"
+  },
+  {
+    "ask_price": 121.47321428571422,
+    "ask_size": 196,
+    "bid_price": 121.40428571428576,
+    "bid_size": 182,
+    "last_trade_price": 121.39485714285719,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:07:32Z"
+  },
+  {
+    "ask_price": 121.44058823529414,
+    "ask_size": 200,
+    "bid_price": 121.36470588235304,
+    "bid_size": 200,
+    "last_trade_price": 121.27039215686291,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:08:10Z"
+  },
+  {
+    "ask_price": 121.39311475409846,
+    "ask_size": 193,
+    "bid_price": 121.3475409836067,
+    "bid_size": 144,
+    "last_trade_price": 121.34344262295076,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:09:18Z"
+  },
+  {
+    "ask_price": 121.42117647058825,
+    "ask_size": 117,
+    "bid_price": 121.34999999999997,
+    "bid_size": 347,
+    "last_trade_price": 121.32451764705884,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:10:40Z"
+  },
+  {
+    "ask_price": 121.38137254901972,
+    "ask_size": 100,
+    "bid_price": 121.31352941176466,
+    "bid_size": 217,
+    "last_trade_price": 121.28333333333335,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:11:03Z"
+  },
+  {
+    "ask_price": 121.31666666666663,
+    "ask_size": 100,
+    "bid_price": 121.2622222222221,
+    "bid_size": 100,
+    "last_trade_price": 121.2652722222222,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:12:14Z"
+  },
+  {
+    "ask_price": 121.26507042253533,
+    "ask_size": 161,
+    "bid_price": 121.20957746478862,
+    "bid_size": 100,
+    "last_trade_price": 121.35591549295765,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:13:01Z"
+  },
+  {
+    "ask_price": 121.20206896551719,
+    "ask_size": 103,
+    "bid_price": 121.16137931034478,
+    "bid_size": 100,
+    "last_trade_price": 121.3743965517242,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:14:38Z"
+  },
+  {
+    "ask_price": 121.13157894736842,
+    "ask_size": 100,
+    "bid_price": 121.07789473684211,
+    "bid_size": 168,
+    "last_trade_price": 121.38447368421055,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:15:18Z"
+  },
+  {
+    "ask_price": 121.13163265306113,
+    "ask_size": 163,
+    "bid_price": 121.07163265306129,
+    "bid_size": 200,
+    "last_trade_price": 121.40387755102033,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:16:10Z"
+  },
+  {
+    "ask_price": 121.1373913043479,
+    "ask_size": 136,
+    "bid_price": 121.09000000000009,
+    "bid_size": 263,
+    "last_trade_price": 121.40999999999991,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:17:16Z"
+  },
+  {
+    "ask_price": 121.1770588235293,
+    "ask_size": 178,
+    "bid_price": 121.14372549019599,
+    "bid_size": 149,
+    "last_trade_price": 121.46372549019593,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:18:19Z"
+  },
+  {
+    "ask_price": 121.31499999999996,
+    "ask_size": 200,
+    "bid_price": 121.28500000000005,
+    "bid_size": 189,
+    "last_trade_price": 121.45464285714293,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:19:27Z"
+  },
+  {
+    "ask_price": 121.43263157894735,
+    "ask_size": 173,
+    "bid_price": 121.36473684210513,
+    "bid_size": 200,
+    "last_trade_price": 121.4601184210527,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:20:05Z"
+  },
+  {
+    "ask_price": 121.53999999999999,
+    "ask_size": 400,
+    "bid_price": 121.49,
+    "bid_size": 200,
+    "last_trade_price": 121.46995294117647,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:21:50Z"
+  },
+  {
+    "ask_price": 121.46120000000008,
+    "ask_size": 360,
+    "bid_price": 121.39853333333323,
+    "bid_size": 274,
+    "last_trade_price": 121.48399999999977,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:22:12Z"
+  },
+  {
+    "ask_price": 121.35000000000001,
+    "ask_size": 500,
+    "bid_price": 121.26,
+    "bid_size": 300,
+    "last_trade_price": 121.52,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:23:54Z"
+  },
+  {
+    "ask_price": 121.34609756097562,
+    "ask_size": 421,
+    "bid_price": 121.26780487804882,
+    "bid_size": 260,
+    "last_trade_price": 121.52857560975602,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:24:03Z"
+  },
+  {
+    "ask_price": 121.3581818181819,
+    "ask_size": 345,
+    "bid_price": 121.28909090909103,
+    "bid_size": 290,
+    "last_trade_price": 121.50763636363637,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:25:00Z"
+  },
+  {
+    "ask_price": 121.38000000000008,
+    "ask_size": 214,
+    "bid_price": 121.31238095238095,
+    "bid_size": 276,
+    "last_trade_price": 121.53142857142859,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:26:15Z"
+  },
+  {
+    "ask_price": 121.35150000000003,
+    "ask_size": 242,
+    "bid_price": 121.28674999999998,
+    "bid_size": 152,
+    "last_trade_price": 121.51337500000014,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:27:12Z"
+  },
+  {
+    "ask_price": 121.31585365853665,
+    "ask_size": 441,
+    "bid_price": 121.26243902439025,
+    "bid_size": 100,
+    "last_trade_price": 121.53512195121948,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:28:06Z"
+  },
+  {
+    "ask_price": 121.33956521739137,
+    "ask_size": 426,
+    "bid_price": 121.29478260869564,
+    "bid_size": 136,
+    "last_trade_price": 121.50152173913042,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:29:01Z"
+  },
+  {
+    "ask_price": 121.3900000000001,
+    "ask_size": 250,
+    "bid_price": 121.3399999999999,
+    "bid_size": 200,
+    "last_trade_price": 121.50912499999995,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:30:03Z"
+  },
+  {
+    "ask_price": 121.39600000000004,
+    "ask_size": 320,
+    "bid_price": 121.36000000000004,
+    "bid_size": 200,
+    "last_trade_price": 121.54149999999998,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:31:19Z"
+  },
+  {
+    "ask_price": 121.41425000000001,
+    "ask_size": 257,
+    "bid_price": 121.37899999999998,
+    "bid_size": 152,
+    "last_trade_price": 121.64050000000005,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:32:08Z"
+  },
+  {
+    "ask_price": 121.43300000000009,
+    "ask_size": 164,
+    "bid_price": 121.40214285714275,
+    "bid_size": 220,
+    "last_trade_price": 121.59214285714295,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:33:04Z"
+  },
+  {
+    "ask_price": 121.48894736842105,
+    "ask_size": 200,
+    "bid_price": 121.4421052631579,
+    "bid_size": 131,
+    "last_trade_price": 121.61499999999997,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:34:39Z"
+  },
+  {
+    "ask_price": 121.49571428571419,
+    "ask_size": 200,
+    "bid_price": 121.44142857142857,
+    "bid_size": 228,
+    "last_trade_price": 121.60797619047612,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:35:04Z"
+  },
+  {
+    "ask_price": 121.48516666666643,
+    "ask_size": 200,
+    "bid_price": 121.4445,
+    "bid_size": 303,
+    "last_trade_price": 121.49816666666673,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:36:01Z"
+  },
+  {
+    "ask_price": 121.47999999999989,
+    "ask_size": 200,
+    "bid_price": 121.46000000000002,
+    "bid_size": 337,
+    "last_trade_price": 121.5,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:37:24Z"
+  },
+  {
+    "ask_price": 121.50133333333346,
+    "ask_size": 342,
+    "bid_price": 121.4671111111111,
+    "bid_size": 257,
+    "last_trade_price": 121.5500000000001,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:38:26Z"
+  },
+  {
+    "ask_price": 121.5159375,
+    "ask_size": 221,
+    "bid_price": 121.4759375,
+    "bid_size": 318,
+    "last_trade_price": 121.57499999999993,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:39:25Z"
+  },
+  {
+    "ask_price": 121.52883720930232,
+    "ask_size": 232,
+    "bid_price": 121.48883720930233,
+    "bid_size": 355,
+    "last_trade_price": 121.51674418604645,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:40:09Z"
+  },
+  {
+    "ask_price": 121.55323076923095,
+    "ask_size": 261,
+    "bid_price": 121.51923076923069,
+    "bid_size": 236,
+    "last_trade_price": 121.5077692307691,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:41:07Z"
+  },
+  {
+    "ask_price": 121.56120000000008,
+    "ask_size": 194,
+    "bid_price": 121.51380000000012,
+    "bid_size": 284,
+    "last_trade_price": 121.52999999999999,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:42:35Z"
+  },
+  {
+    "ask_price": 121.57529411764705,
+    "ask_size": 123,
+    "bid_price": 121.53294117647059,
+    "bid_size": 223,
+    "last_trade_price": 121.55676470588233,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:43:42Z"
+  },
+  {
+    "ask_price": 121.57671232876706,
+    "ask_size": 121,
+    "bid_price": 121.53452054794519,
+    "bid_size": 278,
+    "last_trade_price": 121.53082191780823,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:44:05Z"
+  },
+  {
+    "ask_price": 121.54999999999997,
+    "ask_size": 300,
+    "bid_price": 121.49,
+    "bid_size": 400,
+    "last_trade_price": 121.55999999999996,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:45:44Z"
+  },
+  {
+    "ask_price": 121.57680851063829,
+    "ask_size": 261,
+    "bid_price": 121.51297872340427,
+    "bid_size": 285,
+    "last_trade_price": 121.54755319148946,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:46:00Z"
+  },
+  {
+    "ask_price": 121.634945054945,
+    "ask_size": 267,
+    "bid_price": 121.58494505494524,
+    "bid_size": 100,
+    "last_trade_price": 121.51934065934083,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:47:03Z"
+  },
+  {
+    "ask_price": 121.64000000000006,
+    "ask_size": 220,
+    "bid_price": 121.59000000000009,
+    "bid_size": 160,
+    "last_trade_price": 121.45187500000002,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:49:06Z"
+  },
+  {
+    "ask_price": 121.64000000000006,
+    "ask_size": 300,
+    "bid_price": 121.59604166666675,
+    "bid_size": 200,
+    "last_trade_price": 121.4183333333334,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:50:12Z"
+  },
+  {
+    "ask_price": 121.60437499999996,
+    "ask_size": 181,
+    "bid_price": 121.56437499999997,
+    "bid_size": 200,
+    "last_trade_price": 121.48500000000004,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:51:16Z"
+  },
+  {
+    "ask_price": 121.5499999999999,
+    "ask_size": 221,
+    "bid_price": 121.49842857142866,
+    "bid_size": 317,
+    "last_trade_price": 121.49542857142848,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:52:00Z"
+  },
+  {
+    "ask_price": 121.53000000000004,
+    "ask_size": 391,
+    "bid_price": 121.49739130434783,
+    "bid_size": 217,
+    "last_trade_price": 121.46666956521736,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:53:37Z"
+  },
+  {
+    "ask_price": 121.56675000000004,
+    "ask_size": 347,
+    "bid_price": 121.52625000000008,
+    "bid_size": 200,
+    "last_trade_price": 121.39449999999991,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:54:07Z"
+  },
+  {
+    "ask_price": 121.58819672131142,
+    "ask_size": 359,
+    "bid_price": 121.5381967213114,
+    "bid_size": 140,
+    "last_trade_price": 121.43606557377034,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:55:02Z"
+  },
+  {
+    "ask_price": 121.53885714285715,
+    "ask_size": 331,
+    "bid_price": 121.49571428571427,
+    "bid_size": 237,
+    "last_trade_price": 121.4745714285714,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:56:24Z"
+  },
+  {
+    "ask_price": 121.52648148148144,
+    "ask_size": 364,
+    "bid_price": 121.49296296296296,
+    "bid_size": 170,
+    "last_trade_price": 121.49574074074066,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:57:12Z"
+  },
+  {
+    "ask_price": 121.57499999999996,
+    "ask_size": 464,
+    "bid_price": 121.52571428571426,
+    "bid_size": 100,
+    "last_trade_price": 121.46901071428574,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:58:25Z"
+  },
+  {
+    "ask_price": 121.57790697674423,
+    "ask_size": 323,
+    "bid_price": 121.51790697674409,
+    "bid_size": 232,
+    "last_trade_price": 121.43779069767434,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T17:59:03Z"
+  },
+  {
+    "ask_price": 121.5720000000001,
+    "ask_size": 320,
+    "bid_price": 121.51199999999987,
+    "bid_size": 290,
+    "last_trade_price": 121.46133333333326,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:00:01Z"
+  },
+  {
+    "ask_price": 121.59000000000006,
+    "ask_size": 443,
+    "bid_price": 121.53566666666664,
+    "bid_size": 426,
+    "last_trade_price": 121.48100000000001,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:01:21Z"
+  },
+  {
+    "ask_price": 121.59000000000009,
+    "ask_size": 450,
+    "bid_price": 121.53490566037728,
+    "bid_size": 396,
+    "last_trade_price": 121.49075471698109,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:02:02Z"
+  },
+  {
+    "ask_price": 121.55039999999997,
+    "ask_size": 566,
+    "bid_price": 121.49040000000002,
+    "bid_size": 332,
+    "last_trade_price": 121.53149999999994,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:03:16Z"
+  },
+  {
+    "ask_price": 121.51888888888897,
+    "ask_size": 433,
+    "bid_price": 121.46999999999993,
+    "bid_size": 233,
+    "last_trade_price": 121.55296296296292,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:04:23Z"
+  },
+  {
+    "ask_price": 121.49521739130444,
+    "ask_size": 263,
+    "bid_price": 121.44782608695643,
+    "bid_size": 210,
+    "last_trade_price": 121.61256956521729,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:05:00Z"
+  },
+  {
+    "ask_price": 121.49452830188692,
+    "ask_size": 347,
+    "bid_price": 121.42962264150933,
+    "bid_size": 301,
+    "last_trade_price": 121.63943396226428,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:06:02Z"
+  },
+  {
+    "ask_price": 121.52000000000007,
+    "ask_size": 451,
+    "bid_price": 121.45974358974355,
+    "bid_size": 151,
+    "last_trade_price": 121.61551538461542,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:07:15Z"
+  },
+  {
+    "ask_price": 121.51487179487188,
+    "ask_size": 400,
+    "bid_price": 121.46999999999996,
+    "bid_size": 151,
+    "last_trade_price": 121.60333333333328,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:08:08Z"
+  },
+  {
+    "ask_price": 121.48108695652168,
+    "ask_size": 276,
+    "bid_price": 121.42869565217384,
+    "bid_size": 158,
+    "last_trade_price": 121.59065217391317,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:09:01Z"
+  },
+  {
+    "ask_price": 121.46699999999991,
+    "ask_size": 316,
+    "bid_price": 121.40779999999984,
+    "bid_size": 208,
+    "last_trade_price": 121.55169999999993,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:10:03Z"
+  },
+  {
+    "ask_price": 121.50304347826098,
+    "ask_size": 526,
+    "bid_price": 121.45304347826068,
+    "bid_size": 326,
+    "last_trade_price": 121.51891304347822,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:11:11Z"
+  },
+  {
+    "ask_price": 121.51071428571427,
+    "ask_size": 253,
+    "bid_price": 121.47535714285719,
+    "bid_size": 307,
+    "last_trade_price": 121.48000000000005,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:13:17Z"
+  },
+  {
+    "ask_price": 121.4929166666666,
+    "ask_size": 412,
+    "bid_price": 121.44875000000003,
+    "bid_size": 200,
+    "last_trade_price": 121.44708333333335,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:14:31Z"
+  },
+  {
+    "ask_price": 121.48464285714265,
+    "ask_size": 392,
+    "bid_price": 121.43999999999986,
+    "bid_size": 146,
+    "last_trade_price": 121.44418571428555,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:15:03Z"
+  },
+  {
+    "ask_price": 121.5032258064516,
+    "ask_size": 222,
+    "bid_price": 121.45935483870963,
+    "bid_size": 138,
+    "last_trade_price": 121.45806451612904,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:16:19Z"
+  },
+  {
+    "ask_price": 121.52101694915254,
+    "ask_size": 289,
+    "bid_price": 121.4710169491524,
+    "bid_size": 247,
+    "last_trade_price": 121.45610169491516,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:17:01Z"
+  },
+  {
+    "ask_price": 121.52599999999998,
+    "ask_size": 500,
+    "bid_price": 121.48466666666673,
+    "bid_size": 300,
+    "last_trade_price": 121.43666666666662,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:18:21Z"
+  },
+  {
+    "ask_price": 121.56311111111106,
+    "ask_size": 406,
+    "bid_price": 121.53,
+    "bid_size": 237,
+    "last_trade_price": 121.45288888888894,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:19:02Z"
+  },
+  {
+    "ask_price": 121.5989361702127,
+    "ask_size": 236,
+    "bid_price": 121.55617021276606,
+    "bid_size": 104,
+    "last_trade_price": 121.45574468085107,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:20:03Z"
+  },
+  {
+    "ask_price": 121.64200000000007,
+    "ask_size": 220,
+    "bid_price": 121.6039999999999,
+    "bid_size": 100,
+    "last_trade_price": 121.45199999999986,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:21:06Z"
+  },
+  {
+    "ask_price": 121.6472727272728,
+    "ask_size": 229,
+    "bid_price": 121.63159090909086,
+    "bid_size": 100,
+    "last_trade_price": 121.43590909090904,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:22:06Z"
+  },
+  {
+    "ask_price": 121.66149999999998,
+    "ask_size": 400,
+    "bid_price": 121.62599999999995,
+    "bid_size": 142,
+    "last_trade_price": 121.44287499999989,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:23:08Z"
+  },
+  {
+    "ask_price": 121.63471698113203,
+    "ask_size": 450,
+    "bid_price": 121.56981132075484,
+    "bid_size": 149,
+    "last_trade_price": 121.45056603773575,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:24:01Z"
+  },
+  {
+    "ask_price": 121.61638888888885,
+    "ask_size": 536,
+    "bid_price": 121.5563888888889,
+    "bid_size": 100,
+    "last_trade_price": 121.4488888888888,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:25:12Z"
+  },
+  {
+    "ask_price": 121.59122448979586,
+    "ask_size": 463,
+    "bid_price": 121.52183673469379,
+    "bid_size": 193,
+    "last_trade_price": 121.37714285714287,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:26:00Z"
+  },
+  {
+    "ask_price": 121.55428571428571,
+    "ask_size": 347,
+    "bid_price": 121.48999999999987,
+    "bid_size": 300,
+    "last_trade_price": 121.29357142857145,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:27:09Z"
+  },
+  {
+    "ask_price": 121.53666666666665,
+    "ask_size": 233,
+    "bid_price": 121.48999999999988,
+    "bid_size": 400,
+    "last_trade_price": 121.31950769230762,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:28:07Z"
+  },
+  {
+    "ask_price": 121.51190476190477,
+    "ask_size": 401,
+    "bid_price": 121.46587301587287,
+    "bid_size": 419,
+    "last_trade_price": 121.37170634920622,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:29:00Z"
+  },
+  {
+    "ask_price": 121.47967741935474,
+    "ask_size": 464,
+    "bid_price": 121.43645161290317,
+    "bid_size": 164,
+    "last_trade_price": 121.42806451612897,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:30:25Z"
+  },
+  {
+    "ask_price": 121.46456140350877,
+    "ask_size": 291,
+    "bid_price": 121.43543859649107,
+    "bid_size": 208,
+    "last_trade_price": 121.44999999999987,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:31:06Z"
+  },
+  {
+    "ask_price": 121.46642857142851,
+    "ask_size": 200,
+    "bid_price": 121.44642857142853,
+    "bid_size": 235,
+    "last_trade_price": 121.35428571428568,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:32:23Z"
+  },
+  {
+    "ask_price": 121.46454545454544,
+    "ask_size": 200,
+    "bid_price": 121.44454545454529,
+    "bid_size": 254,
+    "last_trade_price": 121.3800000000001,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:33:01Z"
+  },
+  {
+    "ask_price": 121.44509803921558,
+    "ask_size": 125,
+    "bid_price": 121.41019607843128,
+    "bid_size": 150,
+    "last_trade_price": 121.3779215686276,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:34:17Z"
+  },
+  {
+    "ask_price": 121.45448275862071,
+    "ask_size": 172,
+    "bid_price": 121.40724137931029,
+    "bid_size": 244,
+    "last_trade_price": 121.4020689655173,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:35:26Z"
+  },
+  {
+    "ask_price": 121.4636585365854,
+    "ask_size": 346,
+    "bid_price": 121.41731707317072,
+    "bid_size": 336,
+    "last_trade_price": 121.39488780487812,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:36:04Z"
+  },
+  {
+    "ask_price": 121.45250000000003,
+    "ask_size": 381,
+    "bid_price": 121.42124999999993,
+    "bid_size": 312,
+    "last_trade_price": 121.37057083333339,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:37:00Z"
+  },
+  {
+    "ask_price": 121.44588235294118,
+    "ask_size": 152,
+    "bid_price": 121.41529411764708,
+    "bid_size": 147,
+    "last_trade_price": 121.34656862745108,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:38:05Z"
+  },
+  {
+    "ask_price": 121.46000000000002,
+    "ask_size": 261,
+    "bid_price": 121.43234042553183,
+    "bid_size": 285,
+    "last_trade_price": 121.33170212765955,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:39:15Z"
+  },
+  {
+    "ask_price": 121.46000000000001,
+    "ask_size": 214,
+    "bid_price": 121.44000000000001,
+    "bid_size": 357,
+    "last_trade_price": 121.32057142857148,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:40:18Z"
+  },
+  {
+    "ask_price": 121.46000000000002,
+    "ask_size": 143,
+    "bid_price": 121.43999999999993,
+    "bid_size": 386,
+    "last_trade_price": 121.31625000000014,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:41:05Z"
+  },
+  {
+    "ask_price": 121.37696428571444,
+    "ask_size": 144,
+    "bid_price": 121.35142857142851,
+    "bid_size": 278,
+    "last_trade_price": 121.27000000000018,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:42:04Z"
+  },
+  {
+    "ask_price": 121.32370370370364,
+    "ask_size": 168,
+    "bid_price": 121.29370370370381,
+    "bid_size": 168,
+    "last_trade_price": 121.26187962962979,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:43:19Z"
+  },
+  {
+    "ask_price": 121.34263157894733,
+    "ask_size": 200,
+    "bid_price": 121.31894736842102,
+    "bid_size": 200,
+    "last_trade_price": 121.27000000000001,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:44:34Z"
+  },
+  {
+    "ask_price": 121.39163265306125,
+    "ask_size": 369,
+    "bid_price": 121.36122448979592,
+    "bid_size": 300,
+    "last_trade_price": 121.25124897959171,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:45:00Z"
+  },
+  {
+    "ask_price": 121.47000000000007,
+    "ask_size": 700,
+    "bid_price": 121.42593750000013,
+    "bid_size": 321,
+    "last_trade_price": 121.24430000000001,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:46:06Z"
+  },
+  {
+    "ask_price": 121.46999999999993,
+    "ask_size": 941,
+    "bid_price": 121.42999999999996,
+    "bid_size": 361,
+    "last_trade_price": 121.24555555555548,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:47:32Z"
+  },
+  {
+    "ask_price": 121.44666666666669,
+    "ask_size": 720,
+    "bid_price": 121.40199999999997,
+    "bid_size": 306,
+    "last_trade_price": 121.23866666666657,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:48:21Z"
+  },
+  {
+    "ask_price": 121.40320987654327,
+    "ask_size": 391,
+    "bid_price": 121.36024691358031,
+    "bid_size": 146,
+    "last_trade_price": 121.2209259259258,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:49:02Z"
+  },
+  {
+    "ask_price": 121.41,
+    "ask_size": 300,
+    "bid_price": 121.38000000000007,
+    "bid_size": 200,
+    "last_trade_price": 121.2,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:50:52Z"
+  },
+  {
+    "ask_price": 121.4145161290323,
+    "ask_size": 390,
+    "bid_price": 121.38451612903224,
+    "bid_size": 200,
+    "last_trade_price": 121.177,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:51:18Z"
+  },
+  {
+    "ask_price": 121.4100000000001,
+    "ask_size": 400,
+    "bid_price": 121.37666666666672,
+    "bid_size": 233,
+    "last_trade_price": 121.17544444444445,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:52:00Z"
+  },
+  {
+    "ask_price": 121.3733333333334,
+    "ask_size": 283,
+    "bid_price": 121.32916666666671,
+    "bid_size": 216,
+    "last_trade_price": 121.20177083333328,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:53:01Z"
+  },
+  {
+    "ask_price": 121.35000000000004,
+    "ask_size": 270,
+    "bid_price": 121.30863636363634,
+    "bid_size": 143,
+    "last_trade_price": 121.26886363636362,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:54:06Z"
+  },
+  {
+    "ask_price": 121.35000000000001,
+    "ask_size": 187,
+    "bid_price": 121.3170731707318,
+    "bid_size": 287,
+    "last_trade_price": 121.31231707317079,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:55:05Z"
+  },
+  {
+    "ask_price": 121.35000000000001,
+    "ask_size": 400,
+    "bid_price": 121.31000000000004,
+    "bid_size": 463,
+    "last_trade_price": 121.30951219512198,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:56:01Z"
+  },
+  {
+    "ask_price": 121.33399999999997,
+    "ask_size": 400,
+    "bid_price": 121.29400000000001,
+    "bid_size": 400,
+    "last_trade_price": 121.2601333333333,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:57:01Z"
+  },
+  {
+    "ask_price": 121.28488372093032,
+    "ask_size": 348,
+    "bid_price": 121.24744186046506,
+    "bid_size": 323,
+    "last_trade_price": 121.2784883720931,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:58:01Z"
+  },
+  {
+    "ask_price": 121.2700000000001,
+    "ask_size": 200,
+    "bid_price": 121.23999999999987,
+    "bid_size": 120,
+    "last_trade_price": 121.26226744186057,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T18:59:01Z"
+  },
+  {
+    "ask_price": 121.2761224489796,
+    "ask_size": 261,
+    "bid_price": 121.24612244897958,
+    "bid_size": 230,
+    "last_trade_price": 121.27938775510209,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:00:00Z"
+  },
+  {
+    "ask_price": 121.27761904761903,
+    "ask_size": 430,
+    "bid_price": 121.25071428571425,
+    "bid_size": 238,
+    "last_trade_price": 121.27321428571427,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:01:05Z"
+  },
+  {
+    "ask_price": 121.26227272727273,
+    "ask_size": 418,
+    "bid_price": 121.23409090909081,
+    "bid_size": 345,
+    "last_trade_price": 121.28693181818177,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:02:02Z"
+  },
+  {
+    "ask_price": 121.26488888888885,
+    "ask_size": 413,
+    "bid_price": 121.23244444444443,
+    "bid_size": 500,
+    "last_trade_price": 121.24177777777771,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:03:02Z"
+  },
+  {
+    "ask_price": 121.24479999999996,
+    "ask_size": 552,
+    "bid_price": 121.22000000000001,
+    "bid_size": 344,
+    "last_trade_price": 121.20600799999994,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:04:03Z"
+  },
+  {
+    "ask_price": 121.23297297297292,
+    "ask_size": 386,
+    "bid_price": 121.20864864864856,
+    "bid_size": 500,
+    "last_trade_price": 121.19584864864865,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:05:11Z"
+  },
+  {
+    "ask_price": 121.20636363636363,
+    "ask_size": 265,
+    "bid_price": 121.18295454545445,
+    "bid_size": 602,
+    "last_trade_price": 121.17590909090917,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:06:01Z"
+  },
+  {
+    "ask_price": 121.18000000000004,
+    "ask_size": 351,
+    "bid_price": 121.15377777777773,
+    "bid_size": 573,
+    "last_trade_price": 121.24611111111109,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:07:00Z"
+  },
+  {
+    "ask_price": 121.20000000000009,
+    "ask_size": 550,
+    "bid_price": 121.17499999999981,
+    "bid_size": 150,
+    "last_trade_price": 121.29717741935468,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:08:00Z"
+  },
+  {
+    "ask_price": 121.25172413793113,
+    "ask_size": 262,
+    "bid_price": 121.20586206896554,
+    "bid_size": 258,
+    "last_trade_price": 121.27862068965521,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:09:26Z"
+  },
+  {
+    "ask_price": 121.29418604651163,
+    "ask_size": 151,
+    "bid_price": 121.24906976744187,
+    "bid_size": 251,
+    "last_trade_price": 121.18558139534879,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:10:06Z"
+  },
+  {
+    "ask_price": 121.36422222222212,
+    "ask_size": 246,
+    "bid_price": 121.31444444444449,
+    "bid_size": 248,
+    "last_trade_price": 121.21866666666669,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:11:02Z"
+  },
+  {
+    "ask_price": 121.35023809523811,
+    "ask_size": 354,
+    "bid_price": 121.29476190476183,
+    "bid_size": 209,
+    "last_trade_price": 121.1739285714286,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:12:04Z"
+  },
+  {
+    "ask_price": 121.28520833333329,
+    "ask_size": 347,
+    "bid_price": 121.23999999999985,
+    "bid_size": 147,
+    "last_trade_price": 121.10246458333337,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:13:00Z"
+  },
+  {
+    "ask_price": 121.27999999999999,
+    "ask_size": 400,
+    "bid_price": 121.23419999999983,
+    "bid_size": 142,
+    "last_trade_price": 121.17680000000006,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:14:06Z"
+  },
+  {
+    "ask_price": 121.30300000000003,
+    "ask_size": 285,
+    "bid_price": 121.25875000000003,
+    "bid_size": 215,
+    "last_trade_price": 121.20487500000004,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:15:14Z"
+  },
+  {
+    "ask_price": 121.29804878048787,
+    "ask_size": 200,
+    "bid_price": 121.25804878048775,
+    "bid_size": 343,
+    "last_trade_price": 121.17426829268294,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:16:08Z"
+  },
+  {
+    "ask_price": 121.28840000000012,
+    "ask_size": 292,
+    "bid_price": 121.24380000000008,
+    "bid_size": 308,
+    "last_trade_price": 121.15024599999988,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:17:04Z"
+  },
+  {
+    "ask_price": 121.3046938775511,
+    "ask_size": 400,
+    "bid_price": 121.24408163265295,
+    "bid_size": 253,
+    "last_trade_price": 121.15622448979592,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:18:12Z"
+  },
+  {
+    "ask_price": 121.26405405405401,
+    "ask_size": 297,
+    "bid_price": 121.21459459459453,
+    "bid_size": 197,
+    "last_trade_price": 121.14945945945942,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:19:18Z"
+  },
+  {
+    "ask_price": 121.22083333333335,
+    "ask_size": 154,
+    "bid_price": 121.19083333333337,
+    "bid_size": 191,
+    "last_trade_price": 121.14020833333338,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:20:08Z"
+  },
+  {
+    "ask_price": 121.19636363636369,
+    "ask_size": 236,
+    "bid_price": 121.16636363636357,
+    "bid_size": 300,
+    "last_trade_price": 121.18660454545447,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:21:12Z"
+  },
+  {
+    "ask_price": 121.20000000000003,
+    "ask_size": 400,
+    "bid_price": 121.17499999999994,
+    "bid_size": 300,
+    "last_trade_price": 121.19336041666664,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:22:12Z"
+  },
+  {
+    "ask_price": 121.2515151515152,
+    "ask_size": 400,
+    "bid_price": 121.22363636363644,
+    "bid_size": 378,
+    "last_trade_price": 121.11999999999993,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:23:17Z"
+  },
+  {
+    "ask_price": 121.30839999999995,
+    "ask_size": 400,
+    "bid_price": 121.27260000000004,
+    "bid_size": 542,
+    "last_trade_price": 121.08426400000008,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:24:01Z"
+  },
+  {
+    "ask_price": 121.26868421052629,
+    "ask_size": 321,
+    "bid_price": 121.2307894736842,
+    "bid_size": 402,
+    "last_trade_price": 121.06105000000008,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:25:09Z"
+  },
+  {
+    "ask_price": 121.20999999999994,
+    "ask_size": 320,
+    "bid_price": 121.15999999999991,
+    "bid_size": 220,
+    "last_trade_price": 121.0584444444445,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:26:01Z"
+  },
+  {
+    "ask_price": 121.2370454545453,
+    "ask_size": 500,
+    "bid_price": 121.18999999999993,
+    "bid_size": 400,
+    "last_trade_price": 121.05704545454545,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:27:01Z"
+  },
+  {
+    "ask_price": 121.19869565217395,
+    "ask_size": 465,
+    "bid_price": 121.15173913043478,
+    "bid_size": 365,
+    "last_trade_price": 121.09260434782598,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:28:02Z"
+  },
+  {
+    "ask_price": 121.15238095238097,
+    "ask_size": 307,
+    "bid_price": 121.09857142857143,
+    "bid_size": 330,
+    "last_trade_price": 121.1041666666666,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:29:04Z"
+  },
+  {
+    "ask_price": 121.19666666666656,
+    "ask_size": 200,
+    "bid_price": 121.15999999999994,
+    "bid_size": 333,
+    "last_trade_price": 121.09335333333333,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:30:02Z"
+  },
+  {
+    "ask_price": 121.22645833333337,
+    "ask_size": 400,
+    "bid_price": 121.19645833333318,
+    "bid_size": 235,
+    "last_trade_price": 121.11145833333342,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:31:02Z"
+  },
+  {
+    "ask_price": 121.21512195121942,
+    "ask_size": 424,
+    "bid_price": 121.17780487804887,
+    "bid_size": 251,
+    "last_trade_price": 121.10292682926833,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:32:07Z"
+  },
+  {
+    "ask_price": 121.1999999999999,
+    "ask_size": 500,
+    "bid_price": 121.14000000000004,
+    "bid_size": 159,
+    "last_trade_price": 121.09556818181824,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:33:02Z"
+  },
+  {
+    "ask_price": 121.1913333333333,
+    "ask_size": 500,
+    "bid_price": 121.13711111111114,
+    "bid_size": 328,
+    "last_trade_price": 121.09200000000007,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:34:02Z"
+  },
+  {
+    "ask_price": 121.16217391304342,
+    "ask_size": 343,
+    "bid_price": 121.12217391304345,
+    "bid_size": 282,
+    "last_trade_price": 121.0765217391304,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:35:02Z"
+  },
+  {
+    "ask_price": 121.16828125000013,
+    "ask_size": 218,
+    "bid_price": 121.11671874999995,
+    "bid_size": 159,
+    "last_trade_price": 121.081328125,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:36:06Z"
+  },
+  {
+    "ask_price": 121.19636363636367,
+    "ask_size": 300,
+    "bid_price": 121.14727272727274,
+    "bid_size": 200,
+    "last_trade_price": 121.10340909090911,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:37:31Z"
+  },
+  {
+    "ask_price": 121.1842465753425,
+    "ask_size": 471,
+    "bid_price": 121.14424657534248,
+    "bid_size": 197,
+    "last_trade_price": 121.11486301369868,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:38:01Z"
+  },
+  {
+    "ask_price": 121.10818181818182,
+    "ask_size": 445,
+    "bid_price": 121.06818181818184,
+    "bid_size": 122,
+    "last_trade_price": 121.11272727272727,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:39:40Z"
+  },
+  {
+    "ask_price": 121.09390243902446,
+    "ask_size": 478,
+    "bid_price": 121.0500000000001,
+    "bid_size": 139,
+    "last_trade_price": 121.11475609756096,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:40:12Z"
+  },
+  {
+    "ask_price": 121.08636363636369,
+    "ask_size": 497,
+    "bid_price": 121.0500000000001,
+    "bid_size": 234,
+    "last_trade_price": 121.07636363636361,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:41:07Z"
+  },
+  {
+    "ask_price": 121.06000000000006,
+    "ask_size": 300,
+    "bid_price": 121.04571428571428,
+    "bid_size": 385,
+    "last_trade_price": 121.07,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:42:07Z"
+  },
+  {
+    "ask_price": 121.06980392156858,
+    "ask_size": 300,
+    "bid_price": 121.04980392156875,
+    "bid_size": 598,
+    "last_trade_price": 121.06921568627445,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:43:04Z"
+  },
+  {
+    "ask_price": 121.09724999999996,
+    "ask_size": 242,
+    "bid_price": 121.07149999999994,
+    "bid_size": 642,
+    "last_trade_price": 121.05500000000009,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:44:14Z"
+  },
+  {
+    "ask_price": 121.10999999999993,
+    "ask_size": 382,
+    "bid_price": 121.06784313725501,
+    "bid_size": 478,
+    "last_trade_price": 121.06172156862736,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:45:08Z"
+  },
+  {
+    "ask_price": 121.13695652173905,
+    "ask_size": 230,
+    "bid_price": 121.09369565217385,
+    "bid_size": 265,
+    "last_trade_price": 121.0491304347826,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:46:19Z"
+  },
+  {
+    "ask_price": 121.15000000000005,
+    "ask_size": 420,
+    "bid_price": 121.10199999999996,
+    "bid_size": 360,
+    "last_trade_price": 121.03614285714289,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:47:21Z"
+  },
+  {
+    "ask_price": 121.1267441860466,
+    "ask_size": 453,
+    "bid_price": 121.09069767441855,
+    "bid_size": 353,
+    "last_trade_price": 121.05581395348842,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:48:09Z"
+  },
+  {
+    "ask_price": 121.1,
+    "ask_size": 400,
+    "bid_price": 121.07999999999996,
+    "bid_size": 435,
+    "last_trade_price": 121.14042000000003,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:49:07Z"
+  },
+  {
+    "ask_price": 121.10461538461527,
+    "ask_size": 400,
+    "bid_price": 121.07999999999994,
+    "bid_size": 369,
+    "last_trade_price": 121.09778846153844,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:50:02Z"
+  },
+  {
+    "ask_price": 121.10470588235287,
+    "ask_size": 294,
+    "bid_price": 121.07470588235299,
+    "bid_size": 258,
+    "last_trade_price": 121.11558823529407,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:51:14Z"
+  },
+  {
+    "ask_price": 121.10000000000008,
+    "ask_size": 266,
+    "bid_price": 121.06999999999994,
+    "bid_size": 400,
+    "last_trade_price": 121.14183137254888,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:52:00Z"
+  },
+  {
+    "ask_price": 121.09609756097562,
+    "ask_size": 634,
+    "bid_price": 121.07,
+    "bid_size": 439,
+    "last_trade_price": 121.1530853658537,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:53:09Z"
+  },
+  {
+    "ask_price": 121.11244897959193,
+    "ask_size": 685,
+    "bid_price": 121.0879591836734,
+    "bid_size": 455,
+    "last_trade_price": 121.0954163265306,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:54:03Z"
+  },
+  {
+    "ask_price": 121.14000000000006,
+    "ask_size": 341,
+    "bid_price": 121.10586956521749,
+    "bid_size": 400,
+    "last_trade_price": 121.10510869565212,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:55:10Z"
+  },
+  {
+    "ask_price": 121.1221153846153,
+    "ask_size": 340,
+    "bid_price": 121.09403846153852,
+    "bid_size": 638,
+    "last_trade_price": 121.12730769230777,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:56:14Z"
+  },
+  {
+    "ask_price": 121.09545454545463,
+    "ask_size": 445,
+    "bid_price": 121.07545454545452,
+    "bid_size": 436,
+    "last_trade_price": 121.04954545454542,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:57:24Z"
+  },
+  {
+    "ask_price": 121.08518518518515,
+    "ask_size": 451,
+    "bid_price": 121.0603703703704,
+    "bid_size": 203,
+    "last_trade_price": 121.03129629629636,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:58:24Z"
+  },
+  {
+    "ask_price": 121.07999999999994,
+    "ask_size": 400,
+    "bid_price": 121.05000000000011,
+    "bid_size": 125,
+    "last_trade_price": 120.97872340425538,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T19:59:00Z"
+  },
+  {
+    "ask_price": 121.07756097560971,
+    "ask_size": 400,
+    "bid_price": 121.0475609756098,
+    "bid_size": 200,
+    "last_trade_price": 120.98085365853647,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:00:04Z"
+  },
+  {
+    "ask_price": 121.06772151898728,
+    "ask_size": 400,
+    "bid_price": 121.04278481012659,
+    "bid_size": 359,
+    "last_trade_price": 121.04386075949363,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:01:00Z"
+  },
+  {
+    "ask_price": 121.03999999999998,
+    "ask_size": 400,
+    "bid_price": 121.01,
+    "bid_size": 300,
+    "last_trade_price": 121.03999999999998,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:02:47Z"
+  },
+  {
+    "ask_price": 121.03999999999999,
+    "ask_size": 428,
+    "bid_price": 121.01000000000013,
+    "bid_size": 300,
+    "last_trade_price": 121.05709047619058,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:03:04Z"
+  },
+  {
+    "ask_price": 121.07191489361708,
+    "ask_size": 500,
+    "bid_price": 121.04510638297876,
+    "bid_size": 395,
+    "last_trade_price": 121.07468085106392,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:04:01Z"
+  },
+  {
+    "ask_price": 121.1368292682927,
+    "ask_size": 373,
+    "bid_price": 121.11682926829259,
+    "bid_size": 473,
+    "last_trade_price": 121.13219512195117,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:05:04Z"
+  },
+  {
+    "ask_price": 121.1300000000001,
+    "ask_size": 238,
+    "bid_price": 121.10306122448985,
+    "bid_size": 304,
+    "last_trade_price": 121.23342653061225,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:06:03Z"
+  },
+  {
+    "ask_price": 121.13439024390252,
+    "ask_size": 500,
+    "bid_price": 121.10317073170728,
+    "bid_size": 324,
+    "last_trade_price": 121.19804878048782,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:07:09Z"
+  },
+  {
+    "ask_price": 121.14558139534878,
+    "ask_size": 388,
+    "bid_price": 121.12558139534883,
+    "bid_size": 155,
+    "last_trade_price": 121.2200348837209,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:08:04Z"
+  },
+  {
+    "ask_price": 121.14953488372083,
+    "ask_size": 162,
+    "bid_price": 121.12534883720924,
+    "bid_size": 300,
+    "last_trade_price": 121.1683720930233,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:09:02Z"
+  },
+  {
+    "ask_price": 121.10530303030318,
+    "ask_size": 400,
+    "bid_price": 121.07469696969694,
+    "bid_size": 206,
+    "last_trade_price": 121.16149393939398,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:10:00Z"
+  },
+  {
+    "ask_price": 121.10833333333328,
+    "ask_size": 316,
+    "bid_price": 121.0883333333333,
+    "bid_size": 183,
+    "last_trade_price": 121.13999999999999,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:11:30Z"
+  },
+  {
+    "ask_price": 121.12830188679251,
+    "ask_size": 241,
+    "bid_price": 121.1083018867924,
+    "bid_size": 300,
+    "last_trade_price": 121.10099056603782,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:12:01Z"
+  },
+  {
+    "ask_price": 121.10046511627904,
+    "ask_size": 339,
+    "bid_price": 121.0844186046511,
+    "bid_size": 339,
+    "last_trade_price": 121.12837209302324,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:13:13Z"
+  },
+  {
+    "ask_price": 121.00759999999985,
+    "ask_size": 400,
+    "bid_price": 120.99220000000003,
+    "bid_size": 346,
+    "last_trade_price": 121.10487200000007,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:14:11Z"
+  },
+  {
+    "ask_price": 120.99181818181826,
+    "ask_size": 281,
+    "bid_price": 120.96000000000002,
+    "bid_size": 339,
+    "last_trade_price": 121.07272727272729,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:15:18Z"
+  },
+  {
+    "ask_price": 121.02090909090921,
+    "ask_size": 127,
+    "bid_price": 120.97636363636371,
+    "bid_size": 318,
+    "last_trade_price": 121.02198863636373,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:16:03Z"
+  },
+  {
+    "ask_price": 121.0500000000001,
+    "ask_size": 330,
+    "bid_price": 121.02000000000012,
+    "bid_size": 360,
+    "last_trade_price": 120.96411304347828,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:17:03Z"
+  },
+  {
+    "ask_price": 121.05695652173911,
+    "ask_size": 600,
+    "bid_price": 121.02347826086954,
+    "bid_size": 760,
+    "last_trade_price": 120.83217173913035,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:18:04Z"
+  },
+  {
+    "ask_price": 121.07,
+    "ask_size": 466,
+    "bid_price": 121.04000000000012,
+    "bid_size": 500,
+    "last_trade_price": 120.88488095238095,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:19:07Z"
+  },
+  {
+    "ask_price": 121.0914285714286,
+    "ask_size": 164,
+    "bid_price": 121.07785714285711,
+    "bid_size": 500,
+    "last_trade_price": 120.90994047619047,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:20:04Z"
+  },
+  {
+    "ask_price": 121.1555813953488,
+    "ask_size": 100,
+    "bid_price": 121.13558139534885,
+    "bid_size": 402,
+    "last_trade_price": 120.82152093023251,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:21:03Z"
+  },
+  {
+    "ask_price": 121.19697674418595,
+    "ask_size": 130,
+    "bid_price": 121.17697674418606,
+    "bid_size": 200,
+    "last_trade_price": 120.78003488372092,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:22:01Z"
+  },
+  {
+    "ask_price": 121.20361702127649,
+    "ask_size": 234,
+    "bid_price": 121.18361702127663,
+    "bid_size": 200,
+    "last_trade_price": 120.79465957446813,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:23:00Z"
+  },
+  {
+    "ask_price": 121.20444444444446,
+    "ask_size": 214,
+    "bid_price": 121.18462962962953,
+    "bid_size": 238,
+    "last_trade_price": 120.83223703703709,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:24:01Z"
+  },
+  {
+    "ask_price": 121.17526315789473,
+    "ask_size": 257,
+    "bid_price": 121.15526315789471,
+    "bid_size": 352,
+    "last_trade_price": 120.89763157894738,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:25:15Z"
+  },
+  {
+    "ask_price": 121.18,
+    "ask_size": 440,
+    "bid_price": 121.15595238095231,
+    "bid_size": 359,
+    "last_trade_price": 120.83440476190476,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:26:06Z"
+  },
+  {
+    "ask_price": 121.15365853658533,
+    "ask_size": 500,
+    "bid_price": 121.12365853658545,
+    "bid_size": 256,
+    "last_trade_price": 120.80729268292686,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:27:04Z"
+  },
+  {
+    "ask_price": 121.12693877551024,
+    "ask_size": 465,
+    "bid_price": 121.09693877551015,
+    "bid_size": 234,
+    "last_trade_price": 120.83591836734693,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:28:00Z"
+  },
+  {
+    "ask_price": 121.13199999999995,
+    "ask_size": 320,
+    "bid_price": 121.10999999999999,
+    "bid_size": 340,
+    "last_trade_price": 120.91468000000005,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:29:06Z"
+  },
+  {
+    "ask_price": 121.10812500000002,
+    "ask_size": 239,
+    "bid_price": 121.09416666666662,
+    "bid_size": 439,
+    "last_trade_price": 120.92937500000005,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:30:00Z"
+  },
+  {
+    "ask_price": 121.07750000000003,
+    "ask_size": 350,
+    "bid_price": 121.05500000000009,
+    "bid_size": 425,
+    "last_trade_price": 120.94774999999997,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:31:05Z"
+  },
+  {
+    "ask_price": 121.0269387755102,
+    "ask_size": 532,
+    "bid_price": 120.99367346938784,
+    "bid_size": 363,
+    "last_trade_price": 120.88214285714281,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:32:00Z"
+  },
+  {
+    "ask_price": 120.91298245614043,
+    "ask_size": 600,
+    "bid_price": 120.86210526315784,
+    "bid_size": 645,
+    "last_trade_price": 120.86497368421054,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:33:05Z"
+  },
+  {
+    "ask_price": 120.84482758620685,
+    "ask_size": 455,
+    "bid_price": 120.80413793103446,
+    "bid_size": 455,
+    "last_trade_price": 120.8956,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:34:23Z"
+  },
+  {
+    "ask_price": 120.87863636363623,
+    "ask_size": 236,
+    "bid_price": 120.85863636363636,
+    "bid_size": 236,
+    "last_trade_price": 120.9405545454545,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:35:01Z"
+  },
+  {
+    "ask_price": 120.90372093023252,
+    "ask_size": 220,
+    "bid_price": 120.88372093023264,
+    "bid_size": 190,
+    "last_trade_price": 120.99910232558133,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:36:01Z"
+  },
+  {
+    "ask_price": 120.81540983606577,
+    "ask_size": 454,
+    "bid_price": 120.7954098360656,
+    "bid_size": 262,
+    "last_trade_price": 120.99877868852468,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:37:01Z"
+  },
+  {
+    "ask_price": 120.81,
+    "ask_size": 400,
+    "bid_price": 120.78388888888895,
+    "bid_size": 222,
+    "last_trade_price": 121.05096666666675,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:38:25Z"
+  },
+  {
+    "ask_price": 120.82142857142854,
+    "ask_size": 400,
+    "bid_price": 120.78857142857146,
+    "bid_size": 357,
+    "last_trade_price": 121.04157142857153,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:39:12Z"
+  },
+  {
+    "ask_price": 120.8721276595745,
+    "ask_size": 400,
+    "bid_price": 120.83489361702118,
+    "bid_size": 444,
+    "last_trade_price": 120.96896808510638,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:40:00Z"
+  },
+  {
+    "ask_price": 120.91999999999996,
+    "ask_size": 366,
+    "bid_price": 120.89166666666672,
+    "bid_size": 316,
+    "last_trade_price": 120.89283809523819,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:41:03Z"
+  },
+  {
+    "ask_price": 120.84720000000009,
+    "ask_size": 314,
+    "bid_price": 120.8196000000001,
+    "bid_size": 362,
+    "last_trade_price": 120.86829999999988,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:42:01Z"
+  },
+  {
+    "ask_price": 120.83124999999995,
+    "ask_size": 457,
+    "bid_price": 120.79124999999999,
+    "bid_size": 512,
+    "last_trade_price": 120.83537500000007,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:43:08Z"
+  },
+  {
+    "ask_price": 120.8844186046512,
+    "ask_size": 400,
+    "bid_price": 120.85139534883719,
+    "bid_size": 660,
+    "last_trade_price": 120.8674372093023,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:44:02Z"
+  },
+  {
+    "ask_price": 120.93361702127648,
+    "ask_size": 400,
+    "bid_price": 120.9136170212766,
+    "bid_size": 400,
+    "last_trade_price": 120.9782936170213,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:45:00Z"
+  },
+  {
+    "ask_price": 120.95047619047612,
+    "ask_size": 347,
+    "bid_price": 120.92523809523807,
+    "bid_size": 426,
+    "last_trade_price": 120.96690476190473,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:46:04Z"
+  },
+  {
+    "ask_price": 120.96909090909081,
+    "ask_size": 254,
+    "bid_price": 120.93181818181816,
+    "bid_size": 418,
+    "last_trade_price": 120.87444545454541,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:47:00Z"
+  },
+  {
+    "ask_price": 120.92636363636358,
+    "ask_size": 400,
+    "bid_price": 120.89977272727273,
+    "bid_size": 165,
+    "last_trade_price": 120.88658409090912,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:48:00Z"
+  },
+  {
+    "ask_price": 120.89454545454551,
+    "ask_size": 345,
+    "bid_price": 120.87454545454544,
+    "bid_size": 154,
+    "last_trade_price": 120.92955681818184,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:49:00Z"
+  },
+  {
+    "ask_price": 120.89066666666675,
+    "ask_size": 253,
+    "bid_price": 120.87066666666661,
+    "bid_size": 380,
+    "last_trade_price": 120.88167777777778,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:50:00Z"
+  },
+  {
+    "ask_price": 120.93860465116282,
+    "ask_size": 423,
+    "bid_price": 120.91860465116275,
+    "bid_size": 553,
+    "last_trade_price": 120.90416744186047,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:51:00Z"
+  },
+  {
+    "ask_price": 121,
+    "ask_size": 500,
+    "bid_price": 120.97795454545457,
+    "bid_size": 379,
+    "last_trade_price": 120.85366590909089,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:52:00Z"
+  },
+  {
+    "ask_price": 121.01250000000005,
+    "ask_size": 575,
+    "bid_price": 120.98000000000003,
+    "bid_size": 350,
+    "last_trade_price": 120.83266666666668,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:53:00Z"
+  },
+  {
+    "ask_price": 121.0500000000001,
+    "ask_size": 714,
+    "bid_price": 121.0142857142858,
+    "bid_size": 528,
+    "last_trade_price": 120.76907857142855,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:54:03Z"
+  },
+  {
+    "ask_price": 121.03568181818181,
+    "ask_size": 322,
+    "bid_price": 121.02363636363636,
+    "bid_size": 577,
+    "last_trade_price": 120.79464772727282,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:55:00Z"
+  },
+  {
+    "ask_price": 120.96545454545445,
+    "ask_size": 690,
+    "bid_price": 120.94363636363636,
+    "bid_size": 118,
+    "last_trade_price": 120.80988636363635,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:56:00Z"
+  },
+  {
+    "ask_price": 120.89837209302328,
+    "ask_size": 265,
+    "bid_price": 120.86837209302317,
+    "bid_size": 297,
+    "last_trade_price": 120.80753023255822,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:57:00Z"
+  },
+  {
+    "ask_price": 120.89217391304342,
+    "ask_size": 578,
+    "bid_price": 120.85999999999994,
+    "bid_size": 691,
+    "last_trade_price": 120.83141304347828,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:58:00Z"
+  },
+  {
+    "ask_price": 120.89999999999996,
+    "ask_size": 436,
+    "bid_price": 120.85045454545457,
+    "bid_size": 300,
+    "last_trade_price": 120.89431590909093,
+    "symbol": "MAR",
+    "trading_halted": false,
+    "updated_at": "2017-11-07T20:59:00Z"
+  }
+]

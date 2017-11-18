@@ -42,9 +42,16 @@ CREATE TABLE `moment` (
   `last_trade_price` double DEFAULT NULL,
   `symbol` varchar(8) NOT NULL,
   `trading_halted` tinyint(1) DEFAULT NULL,
-  `updated_at` datetime NOT NULL
+  `updated_at` datetime NOT NULL,
+  UNIQUE (`ask_price`, `ask_price`, `bid_price`, `ask_price`,   `last_trade_price`,  `symbol`, `trading_halted`, `updated_at`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+CREATE TABLE `tables` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(64) NOT NULL,
+  PRIMARY KEY (id)
+) ENGINE=InnoDB;
 
 --
 -- Table structure for table `sets`
@@ -59,7 +66,8 @@ CREATE TABLE `sets` (
   `start` datetime NOT NULL,
   `end` datetime NOT NULL,
   `scale` int(11) NOT NULL,
-  `table` varchar(32) NOT NULL,
+  `table` varchar(64) NOT NULL,
+  FOREIGN KEY (`table`) REFERENCES `tables` (`id`),
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
