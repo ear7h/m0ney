@@ -23,53 +23,33 @@
 
 GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
 
-CREATE DATABASE /*!32312 IF NOT EXISTS*/ `stocks` /*!40100 DEFAULT CHARACTER SET utf8 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `money` /*!40100 DEFAULT CHARACTER SET utf8 */;
 
-USE `stocks`;
+USE `money`;
 
---
--- Table structure for table `moment`
---
+DROP TABLE IF EXISTS `partitions`;
+CREATE TABLE `partitions` (
+  `name`    VARCHAR(64) NOT NULL,
+  `week_of` DATETIME    NOT NULL,
+  UNIQUE (`week_of`),
+  unique KEY(`name`)
+)
+  ENGINE = InnoDB
+  DEFAULT CHARSET = utf8;
 
-DROP TABLE IF EXISTS `moment`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `moment` (
-  `ask_price` double DEFAULT NULL,
-  `ask_size` int(11) DEFAULT NULL,
-  `bid_price` double DEFAULT NULL,
-  `bid_size` int(11) DEFAULT NULL,
-  `last_trade_price` double DEFAULT NULL,
-  `symbol` varchar(8) NOT NULL,
-  `trading_halted` tinyint(1) DEFAULT NULL,
-  `updated_at` datetime NOT NULL,
-  UNIQUE (`ask_price`, `ask_price`, `bid_price`, `ask_price`,   `last_trade_price`,  `symbol`, `trading_halted`, `updated_at`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
-CREATE TABLE `tables` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(64) NOT NULL,
-  PRIMARY KEY (id)
-) ENGINE=InnoDB;
-
---
--- Table structure for table `sets`
---
-
-DROP TABLE IF EXISTS `sets`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `sets` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `symbol` varchar(8) NOT NULL,
-  `start` datetime NOT NULL,
-  `end` datetime NOT NULL,
-  `scale` int(11) NOT NULL,
-  `table` varchar(64) NOT NULL,
-  FOREIGN KEY (`table`) REFERENCES `tables` (`id`),
+DROP TABLE IF EXISTS `runs`;
+CREATE TABLE `runs` (
+  `id`           INT(11)    NOT NULL AUTO_INCREMENT,
+  `symbol`       VARCHAR(8) NOT NULL,
+  `start`        DATETIME   NOT NULL,
+  `end`          DATETIME   NOT NULL,
+  `partition_name` VARCHAR(64)   NOT NULL,
+  FOREIGN KEY (`partition_name`) REFERENCES `partitions` (`name`),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
+)
+  ENGINE = InnoDB
+  AUTO_INCREMENT = 0
+  DEFAULT CHARSET = utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
