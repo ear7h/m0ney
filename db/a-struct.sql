@@ -27,29 +27,44 @@ CREATE DATABASE /*!32312 IF NOT EXISTS*/ `money` /*!40100 DEFAULT CHARACTER SET 
 
 USE `money`;
 
+-- For stage tables
+SET GLOBAL max_heap_table_size = 99999744;
+
+--
+-- Table structure for table `partitions`
+--
+
 DROP TABLE IF EXISTS `partitions`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `partitions` (
-  `name`    VARCHAR(64) NOT NULL,
-  `week_of` DATETIME    NOT NULL,
-  UNIQUE (`week_of`),
-  unique KEY(`name`)
-)
-  ENGINE = InnoDB
-  DEFAULT CHARSET = utf8;
+  `name` varchar(64) NOT NULL,
+  `week_of` datetime NOT NULL,
+  UNIQUE KEY `week_of` (`week_of`),
+  UNIQUE KEY `name` (`name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `runs`
+--
 
 DROP TABLE IF EXISTS `runs`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `runs` (
-  `id`           INT(11)    NOT NULL AUTO_INCREMENT,
-  `symbol`       VARCHAR(8) NOT NULL,
-  `start`        DATETIME   NOT NULL,
-  `end`          DATETIME   NOT NULL,
-  `partition_name` VARCHAR(64)   NOT NULL,
-  FOREIGN KEY (`partition_name`) REFERENCES `partitions` (`name`),
-  PRIMARY KEY (`id`)
-)
-  ENGINE = InnoDB
-  AUTO_INCREMENT = 0
-  DEFAULT CHARSET = utf8;
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `symbol` varchar(8) NOT NULL,
+  `start` datetime NOT NULL,
+  `end` datetime NOT NULL,
+  `partition_name` varchar(64) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `partition_name` (`partition_name`),
+  CONSTRAINT `runs_ibfk_1` FOREIGN KEY (`partition_name`) REFERENCES `partitions` (`name`)
+) ENGINE=InnoDB AUTO_INCREMENT=8046 DEFAULT CHARSET=utf8;
+
+
+/*!40101 SET character_set_client = @saved_cs_client */;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
