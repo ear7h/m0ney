@@ -14,6 +14,5 @@ RUN go build .
 WORKDIR /go/src/github.com/ear7h/m0ney/
 RUN go get ./...
 RUN go build .
-RUN ls
 
 CMD daemon/daemon & ./m0ney
