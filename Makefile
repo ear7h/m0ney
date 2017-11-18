@@ -10,7 +10,9 @@ dockers:
 
 ups: dockers
 	nohup docker-compose up > log.out &
-
+stop:
+	docker stop m0ney-server
+	docker stop m0ney-db
 
 go:
 	go build .
