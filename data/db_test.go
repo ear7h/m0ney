@@ -2,11 +2,11 @@ package data
 
 import (
 	"database/sql"
+	"encoding/json"
 	"fmt"
+	"io/ioutil"
 	"testing"
 	"time"
-	"io/ioutil"
-	"encoding/json"
 )
 
 var _testQuotes []Quote
@@ -29,8 +29,7 @@ func init() {
 	must(err)
 	db.Close()
 
-
-	byt, err  = ioutil.ReadFile("test_data.json")
+	byt, err = ioutil.ReadFile("test_data.json")
 	must(err)
 
 	_testQuotes = []Quote{}
@@ -127,14 +126,14 @@ func TestMoneyDB_Runs(t *testing.T) {
 		// start time should be same timestamp as first in test sequence
 		runs[0].Start.Format(SQL_TIME) !=
 			_testQuotes[0].UpdatedAt.Format(SQL_TIME) ||
-	// end time should be same timestamp as last in test sequence
+		// end time should be same timestamp as last in test sequence
 		runs[0].End.Format(SQL_TIME) !=
-			_testQuotes[len(_testQuotes) - 1].UpdatedAt.Format(SQL_TIME){
+			_testQuotes[len(_testQuotes)-1].UpdatedAt.Format(SQL_TIME) {
 		fmt.Println("runs not correct: ", runs)
 		fmt.Println(runs[0].Start.Format(SQL_TIME) !=
 			_testQuotes[0].UpdatedAt.Format(SQL_TIME))
 		fmt.Println(runs[0].End.Format(SQL_TIME) !=
-			_testQuotes[len(_testQuotes) - 1].UpdatedAt.Format(SQL_TIME))
+			_testQuotes[len(_testQuotes)-1].UpdatedAt.Format(SQL_TIME))
 		t.Fail()
 		return
 	}

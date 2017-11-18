@@ -15,11 +15,11 @@ type Partition struct {
 }
 
 type Run struct {
-	ID            int           `json:"id"`
-	Symbol        string        `json:"symbol"`
-	Start         time.Time     `json:"start"`
-	End           time.Time     `json:"end"`
-	PartitionName string `json:"partition_id"`
+	ID            int       `json:"id"`
+	Symbol        string    `json:"symbol"`
+	Start         time.Time `json:"start"`
+	End           time.Time `json:"end"`
+	PartitionName string    `json:"partition_id"`
 }
 
 type Quote struct {

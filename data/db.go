@@ -18,7 +18,6 @@ type MoneyDB struct {
 	lastStage string
 }
 
-
 func NewMoneyDB(user, pass, host, port, schema string) (mdb *MoneyDB, err error) {
 	url := fmt.Sprintf("%s:%s@(%s:%s)/%s", user, pass, host, port, schema)
 	url += "?multiStatements=true&parseTime=true"
@@ -27,17 +26,15 @@ func NewMoneyDB(user, pass, host, port, schema string) (mdb *MoneyDB, err error)
 	if err != nil {
 		return
 	}
-	fmt.Println("waiting for database...")
-	time.Sleep(1 * time.Minute)
-	fmt.Println("resuming")
 
 	err = db.Ping()
-	if err != nil {
-		fmt.Println("ping fail")
-		return
+	for err != nil {
+		fmt.Println("db ping fail, trying again in 20s...")
+		time.Sleep(20 * time.Second)
+		err = db.Ping()
 	}
 
-	mdb = &MoneyDB{DB: db,lastPart: "",lastStage: ""}
+	mdb = &MoneyDB{DB: db, lastPart: "", lastStage: ""}
 	return
 }
 
@@ -232,7 +229,6 @@ WHERE p.week_of = date(?)`, t.Format("2006-01-02"))
 	}
 	defer rows.Close()
 
-
 	for rows.Next() {
 		err = rows.Scan(&name)
 		if err != nil {
@@ -281,7 +277,7 @@ WHERE p.week_of = date(?)`, t.Format("2006-01-02"))
 }
 
 func (m *MoneyDB) Nightly() {
-	m.lastPart =  m.transferStageToPartition(m.lastStage)
+	m.lastPart = m.transferStageToPartition(m.lastStage)
 	m.lastStage = ""
 }
 

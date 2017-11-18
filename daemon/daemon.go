@@ -3,8 +3,8 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
 	"github.com/ear7h/m0ney/data"
+	"io/ioutil"
 	"log"
 	"net/http"
 	"strings"
@@ -44,7 +44,7 @@ func insertPrices() {
 		return
 	}
 
-	dat := struct{
+	dat := struct {
 		Results []rhQuote `json:"results"`
 	}{}
 
@@ -139,7 +139,6 @@ func main() {
 	//program loop
 	for true {
 		s, e := getMarketHours()
-
 
 		if (time.Time{} == s) || (time.Time{} == e) {
 			log.Println("could not get market hrs trying again in 10 seconds")

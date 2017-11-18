@@ -51,7 +51,7 @@ func handleRun(w http.ResponseWriter, r *http.Request) {
 
 	run, err := _db.Run(int(i))
 	if err != nil {
-		http.Error(w, "could not retrieve run " + arr[2], http.StatusInternalServerError)
+		http.Error(w, "could not retrieve run "+arr[2], http.StatusInternalServerError)
 	}
 
 	byt, err := json.Marshal(run)
