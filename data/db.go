@@ -27,9 +27,13 @@ func NewMoneyDB(user, pass, host, port, schema string) (mdb *MoneyDB, err error)
 	if err != nil {
 		return
 	}
+	fmt.Println("waiting for database...")
+	time.Sleep(1 * time.Minute)
+	fmt.Println("resuming")
 
 	err = db.Ping()
 	if err != nil {
+		fmt.Println("ping fail")
 		return
 	}
 
@@ -168,6 +172,8 @@ CREATE TABLE %s (
 	return
 }
 
+// Insert quotes assumes the passed quotes are the latest pulled quotes
+// MEANING: it only works real time
 func (m *MoneyDB) InsertQuotes(q []Quote) (err error) {
 	tblName := time.Now().Format("mem_2006_01_02_stage")
 
