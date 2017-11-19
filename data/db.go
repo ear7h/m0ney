@@ -334,7 +334,7 @@ WHERE updated_at >= timestamp('%s') AND updated_at <= timestamp('%s') AND symbol
 	for i := 0; rows.Next(); i++ {
 		v := Quote{}
 
-		err = rows.Scan(&(v.AskPrice), &(v.AskPrice),
+		err = rows.Scan(&(v.AskPrice), &(v.AskSize),
 			&(v.BidPrice), &(v.BidSize), &(v.LastTradePrice),
 			&(v.Symbol), &(v.TradingHalted), &(v.UpdatedAt))
 		if err != nil {

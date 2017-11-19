@@ -159,6 +159,13 @@ func TestMoneyDB_Run(t *testing.T) {
 			t.Fail()
 			return
 		}
+		
+		v.UpdatedAt = _testQuotes[k].UpdatedAt
+		if v != _testQuotes[k] {
+			fmt.Println("fail at ", k, ": ", v, _testQuotes[k])
+			t.Fail()
+			return
+		}
 	}
 
 }
