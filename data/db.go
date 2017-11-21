@@ -6,6 +6,7 @@ import (
 	"time"
 
 	_ "github.com/go-sql-driver/mysql"
+	"log"
 )
 
 const (
@@ -34,6 +35,11 @@ func NewMoneyDB(user, pass, host, port, schema string) (mdb *MoneyDB, err error)
 		err = db.Ping()
 	}
 
+	_, err = db.Exec(`SET GLOBAL max_heap_table_size = 99999744;`)
+	if err != nil {
+		panic(err)
+	}
+
 	mdb = &MoneyDB{DB: db, lastPart: "", lastStage: ""}
 	return
 }
@@ -45,6 +51,7 @@ func (m *MoneyDB) Partitions() (arr []Partition, err error) {
 SELECT id, name, week_of FROM partitions;
 `)
 	if err != nil {
+		log.Printf(err.Error())
 		return
 	}
 	defer rows.Close()
@@ -58,6 +65,7 @@ SELECT id, name, week_of FROM partitions;
 	}
 
 	if !rows.NextResultSet() {
+		log.Fatalf("Could not get second result set")
 		return
 	}
 

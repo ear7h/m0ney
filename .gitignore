@@ -4,7 +4,7 @@ server/server
 #ignore databae backups files
 db/data/*
 db/*latest.sql
-
+db/backup
 
 # Binaries for programs and plugins
 *.exe

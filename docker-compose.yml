@@ -7,7 +7,7 @@ services:
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
     volumes:
-      - "/var/ear7h/m0ney/:/var/ear7h/m0ney/"
+      - "./db/backup/:/var/ear7h/m0ney/db/"
     restart: always
 
   server:
