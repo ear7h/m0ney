@@ -224,7 +224,7 @@ func (m *MoneyDB) GetPartition(t time.Time) (part string) {
 FROM partitions as p
 WHERE p.week_of = date(?)`, weekStart.Format("2006-01-02"))
 	if err != nil {
-		fmt.Printf("couldn't retrieve name `%s`\n%s\n", stageName, err.Error())
+		fmt.Printf("couldn't retrieve name `%s`\n%s\n", t.Format("2006-01-02"), err.Error())
 		return
 	}
 	defer rows.Close()
