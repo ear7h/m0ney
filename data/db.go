@@ -213,6 +213,33 @@ VALUES `, m.lastStage)
 	return
 }
 
+
+// Fetches the partition for a particular date
+// returns empty string if the partition does not exist
+func (m *MoneyDB) GetPartition(t time.Time) (part string) {
+	weekStart := t.Add(time.Duration(t.Weekday()) * -24 * time.Hour)
+
+	// get the name of the partition for the stage's date
+	rows, err := m.Query(`SELECT name
+FROM partitions as p
+WHERE p.week_of = date(?)`, weekStart.Format("2006-01-02"))
+	if err != nil {
+		fmt.Printf("couldn't retrieve name `%s`\n%s\n", stageName, err.Error())
+		return
+	}
+	defer rows.Close()
+
+	for rows.Next() {
+		err = rows.Scan(&part)
+		if err != nil {
+			fmt.Println("couldn't scan name\n", err)
+		}
+		break
+	}
+
+	return
+}
+
 // 1) finds the partition for the stage's date
 // 2) registers the staged runs in the `runs` table
 // 3) moves all staged rows into the fetched partition(1)
@@ -226,24 +253,9 @@ func (m *MoneyDB) transferStageToPartition(stageName string) (name string) {
 		fmt.Println("error parsing last stage\n", err)
 		return
 	}
-get_part:
-	// get the name of the partition for the stage's date
-	rows, err := m.Query(`SELECT name
-FROM partitions as p
-WHERE p.week_of = date(?)`, t.Format("2006-01-02"))
-	if err != nil {
-		fmt.Println("couldn't retrieve name\n", err)
-		return
-	}
-	defer rows.Close()
 
-	for rows.Next() {
-		err = rows.Scan(&name)
-		if err != nil {
-			fmt.Println("couldn't scan name\n", err)
-			return
-		}
-	}
+get_part:
+	name = m.GetPartition(t)
 
 	// partition hasn't been created
 	if name == "" {
@@ -285,6 +297,7 @@ WHERE p.week_of = date(?)`, t.Format("2006-01-02"))
 }
 
 func (m *MoneyDB) Nightly() {
+	fmt.Println("nightly transfer, ", m.lastStage)
 	m.lastPart = m.transferStageToPartition(m.lastStage)
 	m.lastStage = ""
 }

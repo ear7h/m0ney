@@ -30,7 +30,7 @@ func init() {
 
 func insertPrices() {
 	addr := QUOTES_URL + strings.Join(_symbols, ",")
-	log.Println("getting ", addr)
+	// log.Println("getting ", addr)
 	resp, err := http.Get(addr)
 	if err != nil {
 		log.Println("error error getting prices", err)
